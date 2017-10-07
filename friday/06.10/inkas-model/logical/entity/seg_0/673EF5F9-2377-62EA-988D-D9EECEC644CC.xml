@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="673EF5F9-2377-62EA-988D-D9EECEC644CC" name="Appeal">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:38:52 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="0E7C4F60-8A49-1E46-8658-E35501758DD7">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:38:58 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="user_id" id="EB3A74AD-2CC9-A54C-F470-D766B2A6B943">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:38:58 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="type" id="E1672899-3B11-7C15-8B8E-5D3E2E7EC049">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:39:27 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>2</use>
+<distinctType>B89BEF5F-B527-00CF-D995-5FBE5A7E31F9</distinctType>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="description" id="3253EF21-7129-2531-9F5A-17E67BA3DBD6">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:39:45 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rating" id="23F664CC-9A9C-6AE3-0D37-5AD9C8DDD462">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:40:06 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="created_date" id="927AAF88-5245-5C5D-6EBB-7560049945F0">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:40:24 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="object_id" id="E78A1C68-2779-EAA1-BE53-5FE6A0E05823">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:40:35 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DAE5CF74-FA34-2CE6-D750-EAE7D0FD3BE8" name="Appeal PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:46:19 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0E7C4F60-8A49-1E46-8658-E35501758DD7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

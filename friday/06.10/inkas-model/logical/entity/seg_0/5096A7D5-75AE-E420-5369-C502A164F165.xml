@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5096A7D5-75AE-E420-5369-C502A164F165" name="UserObjectRelation">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:50:41 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="user_display_name" id="FF9F18A9-A5E3-02D8-AF44-B29469DA7C2F">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:50:48 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="user_id" id="5767B08F-7FEF-883A-BA95-6FAB9ACAEC20">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 16:28:38 UTC</createdTime>
+<generatorID>642713DE-49B1-B47D-6CCE-A66300BD9121</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<referedAttribute>1F1914F6-14CA-E39F-1E02-A0387EAF77A9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="object_id" id="ED4E3346-329C-F643-6223-D84C2FA70C88">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 16:28:46 UTC</createdTime>
+<generatorID>B294F1E3-AA88-EE41-40F4-C72540AD950F</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<referedAttribute>684597DA-85F9-12E4-EEB0-D69C4F326F4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ACDE6E08-6CDC-E643-3B97-D4986F00BC39" name="UserObjectRelation PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:51:23 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AA3B0790-9826-D9E6-1E9F-692ECD8DB25F" name="Address">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:31:35 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="9E9F3641-F940-5E64-C026-33A9214663D1">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:31:41 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="postcode" id="90E4D3C3-D9A3-6E03-45E4-519A792124B9">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:31:41 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="city" id="2AEF5A1F-A4EB-D80F-BEB3-0BCDC72A8D03">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:31:42 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="street" id="1C721569-51B0-5BE3-34D7-FA8C08C142DB">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:31:42 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="street_number" id="2047F00B-FDB3-A859-4D82-2BA92B97263E">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:32:17 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="district" id="BDC23D1E-B9CC-F909-9ADC-EF36F71B101B">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:32:17 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="building" id="26DD73A2-0BAA-C3E0-4FBF-3815024E8422">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:32:17 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apprtment" id="DC35E100-E86B-A428-70AB-F1706D0C339A">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:32:17 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="code" id="457E49E3-E13A-B552-CF89-31E04777A747">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:49:25 UTC</createdTime>
+<generatorID>A7C01FA3-CFBA-16D2-306A-9D36AAB3F25C</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<referedAttribute>684597DA-85F9-12E4-EEB0-D69C4F326F4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7B399821-21C3-027B-1242-64F7C399B7A8" name="Address PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:31:51 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9E9F3641-F940-5E64-C026-33A9214663D1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

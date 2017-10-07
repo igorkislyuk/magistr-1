@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DistinctType class="oracle.dbtools.crest.model.design.datatypes.DistinctType" name="OrderType" directorySegmentName="seg_0" id="CB061914-B15F-F206-D6D9-240C9A96B1D0">
+<createdBy>KislI</createdBy>
+<createdTime>2017-09-08 15:43:06 UTC</createdTime>
+<comment>OrderType for determine if Order for requesting / cancelling for Order</comment>
+<ownerDesignName>inkas-model</ownerDesignName>
+<predefined>false</predefined>
+<logicalDataType>LOGDT034</logicalDataType>
+<precision>0</precision>
+<scale>0</scale>
+<size>1</size>
+</DistinctType>

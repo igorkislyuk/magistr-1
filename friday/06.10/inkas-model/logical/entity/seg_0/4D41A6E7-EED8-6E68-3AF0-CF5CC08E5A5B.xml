@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4D41A6E7-EED8-6E68-3AF0-CF5CC08E5A5B" name="Nominals">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:36:57 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="CEA5455D-95BA-3366-3184-EB65FACBCAA9">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:37:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="multiply_index" id="011A6C5E-272C-AFA4-69FB-5EBDC31CE3A4">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:37:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="description" id="C4B8AFAA-C188-C914-C29A-D8B1BE488EDC">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:37:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="type" id="B6AD7CF9-924E-A221-6A15-F3658AFE89CF">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:37:36 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>2</use>
+<distinctType>D7E94F4B-2A80-BFA5-5D9F-B1805E70044D</distinctType>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="weight" id="D864CECF-784C-1DDB-A118-9040981EB351">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:37:36 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total" id="CDF50F55-E3FE-308A-6101-F41CB9BBB8A3">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:38:13 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B4F4CEAA-D66B-8FA0-1CFE-DA7433D93DCE" name="Nominals PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 16:17:23 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CEA5455D-95BA-3366-3184-EB65FACBCAA9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

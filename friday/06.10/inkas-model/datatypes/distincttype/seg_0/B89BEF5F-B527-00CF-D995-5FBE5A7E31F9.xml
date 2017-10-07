@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DistinctType class="oracle.dbtools.crest.model.design.datatypes.DistinctType" name="AppealType" directorySegmentName="seg_0" id="B89BEF5F-B527-00CF-D995-5FBE5A7E31F9">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:36:41 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<predefined>false</predefined>
+<logicalDataType>LOGDT011</logicalDataType>
+<precision>0</precision>
+<scale>0</scale>
+</DistinctType>

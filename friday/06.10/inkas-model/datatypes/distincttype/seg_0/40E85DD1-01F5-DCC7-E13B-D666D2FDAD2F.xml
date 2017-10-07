@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DistinctType class="oracle.dbtools.crest.model.design.datatypes.DistinctType" name="SystemType" directorySegmentName="seg_0" id="40E85DD1-01F5-DCC7-E13B-D666D2FDAD2F">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:27:48 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<predefined>false</predefined>
+<logicalDataType>LOGDT017</logicalDataType>
+<precision>0</precision>
+<scale>0</scale>
+</DistinctType>
