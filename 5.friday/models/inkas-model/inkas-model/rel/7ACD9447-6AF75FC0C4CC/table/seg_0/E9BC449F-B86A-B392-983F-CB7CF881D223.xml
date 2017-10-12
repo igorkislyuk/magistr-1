@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E9BC449F-B86A-B392-983F-CB7CF881D223" name="Car">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>4BFC087D-FA20-D87E-8CFB-682C7FC6D632</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="359E4C88-7391-199A-5933-2278A995273F">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>48A28122-BB05-E347-B4AC-063BEA1D2BEA</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="number" id="3B5EF5D1-1B8E-3FF5-271A-480E7FB236FC">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>247A7D1E-1B1E-53D1-3DBF-AC5C9F305E19</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="capacity" id="DD605A1E-C586-EF8C-741D-7F45836E2A0C">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>204FD616-F022-0A6D-B74F-47CF8AE656DB</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="start_using_date" id="5B6F1B8E-5267-07DC-D436-EDB65B607CF4">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>3EC11E1E-AA1B-A292-ED0C-944C3B65B149</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="end_using_date" id="C498F6FD-9C6A-21B2-EE96-25FE49FFD7DA">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>6F9EF044-B704-2C7D-4EE7-91B63AA586C5</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C059267E-43BE-0394-DB89-E9C9DA4E15E9" name="Car_PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>C0BEA6F3-8E8E-036C-04B8-98CD27644B05</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="359E4C88-7391-199A-5933-2278A995273F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

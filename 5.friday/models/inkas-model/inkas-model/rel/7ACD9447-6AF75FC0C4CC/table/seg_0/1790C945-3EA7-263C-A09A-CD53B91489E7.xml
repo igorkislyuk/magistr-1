@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1790C945-3EA7-263C-A09A-CD53B91489E7" name="ObjectAmountRelation">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>B49642A4-62D4-840E-C8E1-E5709EB11CCC</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Summary_id" id="6BE54E7B-071F-7CEF-F40C-ABB4800DBEEB">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>5556616C-838A-872D-7F54-40069A2A1946</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A0A69A32-6EAD-FED9-F803-6D4D7BE1BC28" referredColumn="34C2857B-E98C-F26D-D20B-BB1EB3609ABA"/>
+</associations>
+</Column>
+<Column name="date" id="03EFBBA4-CCC6-C18B-BE1E-BBEA33C7642A">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>000A13B9-0BE6-E797-D8AE-702CDCB18905</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Object_code" id="6E3270EE-DB6C-1D57-E24F-C70B384F1AF3">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>2BEE72B9-B1BC-B3D4-7C5F-28CB88F372BE</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B953B0D-1660-4286-6BA1-1723F4213117" referredColumn="7916A102-2F12-C44C-0FB1-F702FE19515D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="590F66A1-B528-573C-DBAA-1606A1D6C9F8" name="ObjectAmountRelation_PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>C3F40346-A879-C1B3-710F-BDA4071FFC2E</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="CEC5E087-88F5-D57E-220A-0ABCDD5EA005" name="ObjectAmountRelation__IDX">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>33AF5964-ABC0-63C5-BB64-8876A836CBBE</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="6E3270EE-DB6C-1D57-E24F-C70B384F1AF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D8BF9D3-5CC7-85B8-47DA-32DFD2FAC9AB" name="ObjectAmountRelation__IDXv1">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>7C09ED9E-AFCC-25BC-347B-C3DA51EC94DA</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="6BE54E7B-071F-7CEF-F40C-ABB4800DBEEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F51A5412-E7E4-AB55-E544-D67C47746E3E" name="ObjectAmountRelation_Object_FK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<generatorID>33AF5964-ABC0-63C5-BB64-8876A836CBBE</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6E3270EE-DB6C-1D57-E24F-C70B384F1AF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4255ACBA-2F6B-6712-7B64-1D7183FF6D3F" name="ObjectAmountRelation_Summary_FK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<generatorID>7C09ED9E-AFCC-25BC-347B-C3DA51EC94DA</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BE54E7B-071F-7CEF-F40C-ABB4800DBEEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

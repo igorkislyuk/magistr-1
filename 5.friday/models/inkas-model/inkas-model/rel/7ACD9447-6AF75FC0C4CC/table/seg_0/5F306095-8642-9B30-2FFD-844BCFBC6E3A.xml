@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F306095-8642-9B30-2FFD-844BCFBC6E3A" name="User">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>7B304016-462A-F30B-F2F2-5A75DC27F4E8</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="E99846C0-0336-318E-2760-209C832B6644">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>1F1914F6-14CA-E39F-1E02-A0387EAF77A9</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="AAB07033-D3D6-0DA0-8409-02DB0E045419">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>4E9C3D56-90DC-B3D2-A134-924AD375163A</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="surname" id="3D4628C5-100F-50B1-AA02-E4960937DB75">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>B3A15E03-54B5-734B-808F-5D2169A2EEE1</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="passport" id="3CD74F26-18D0-38D0-0288-1EB37C6C8A04">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>A597DF12-1CE1-4C53-EC6C-799A85F5CD8B</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birthday" id="33B10988-7962-D16E-A575-B6E9B8591841">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>1515E3F1-FE14-5E4C-A28A-B386C716BE04</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone_number" id="45731E52-8EC0-3378-FDC4-10630D9F0D67">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>A753BC69-29F5-CA4F-660A-BF3DB7FA120F</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="3FF75162-4A29-694A-82E1-002AAB4F4201">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>A132E6D8-F1F0-66A8-5F33-4C3ED29FF7B8</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pass_hash" id="2240A1DC-12D0-06BE-DB44-05FB2786F12F">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>FCFCC77C-2D78-0EF5-9A33-AA31502B64B0</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_type" id="26110528-597E-5CDD-297F-A71F3A015887">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>A74C2D2B-B7DC-2A7C-BC6F-4BBC54F5270D</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>2</use>
+<distinctType>095B71E4-83CC-9B27-D788-C3C46DB375FD</distinctType>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="48ED2707-62CB-1C7E-0897-B8D6DC889E97" name="User_PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>CC9DAD1C-D786-E352-6BBF-24F49E498737</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E99846C0-0336-318E-2760-209C832B6644"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

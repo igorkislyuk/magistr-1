@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7B304016-462A-F30B-F2F2-5A75DC27F4E8" name="User">
+<createdBy>KislI</createdBy>
+<createdTime>2017-09-08 15:47:56 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="1F1914F6-14CA-E39F-1E02-A0387EAF77A9">
+<createdBy>KislI</createdBy>
+<createdTime>2017-09-08 15:48:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="4E9C3D56-90DC-B3D2-A134-924AD375163A">
+<createdBy>KislI</createdBy>
+<createdTime>2017-09-08 15:48:19 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="surname" id="B3A15E03-54B5-734B-808F-5D2169A2EEE1">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:24:27 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="passport" id="A597DF12-1CE1-4C53-EC6C-799A85F5CD8B">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:24:27 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="birthday" id="1515E3F1-FE14-5E4C-A28A-B386C716BE04">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:24:27 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="phone_number" id="A753BC69-29F5-CA4F-660A-BF3DB7FA120F">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:24:28 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="A132E6D8-F1F0-66A8-5F33-4C3ED29FF7B8">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:24:28 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pass_hash" id="FCFCC77C-2D78-0EF5-9A33-AA31502B64B0">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:24:28 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="user_type" id="A74C2D2B-B7DC-2A7C-BC6F-4BBC54F5270D">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:24:28 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>2</use>
+<distinctType>095B71E4-83CC-9B27-D788-C3C46DB375FD</distinctType>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CC9DAD1C-D786-E352-6BBF-24F49E498737" name="Object PK">
+<createdBy>KislI</createdBy>
+<createdTime>2017-09-08 15:54:56 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1F1914F6-14CA-E39F-1E02-A0387EAF77A9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

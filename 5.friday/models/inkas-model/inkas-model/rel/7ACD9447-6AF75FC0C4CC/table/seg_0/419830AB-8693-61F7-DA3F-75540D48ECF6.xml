@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="419830AB-8693-61F7-DA3F-75540D48ECF6" name="SummaryExchangeRelation">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>2B7ADDFD-AF25-F367-E8F9-3D5AF79B0B50</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Summary_id" id="002D74AF-DFB2-EAF8-E205-9EC5CEB48B79">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>035D66EF-C053-B7BE-E4C7-5EA79BA0EF3C</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8C76FB6C-E0FF-11AD-E252-5BC1978A34C6" referredColumn="34C2857B-E98C-F26D-D20B-BB1EB3609ABA"/>
+</associations>
+</Column>
+<Column name="Exchange_id" id="FADC94DD-D6C4-66C8-E6CE-35F4CFE6837A">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>50BAAAF0-811C-3385-82B6-7AA990B80E3B</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1D74C0BC-DF95-9ACA-56DE-FBBA3D7B05F3" referredColumn="F369FBD0-0157-AA1E-9C68-080A41C8D758"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6697B16E-4047-E612-C7A1-3BE54BB1C841" name="SummaryExchangeRelation__IDX">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>5148779F-9E74-448F-1E83-E3C3E18BABF0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="002D74AF-DFB2-EAF8-E205-9EC5CEB48B79"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FFD12FB8-E59D-75B3-AAF6-EB734F350AED" name="SummaryExchangeRelation__IDXv1">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>8CADCBB4-C027-B427-02B1-C5D62E23A033</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="FADC94DD-D6C4-66C8-E6CE-35F4CFE6837A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0CC40828-1752-1B6D-CDAF-F383843C798A" name="SummaryExchangeRelation_Summary_FK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<generatorID>5148779F-9E74-448F-1E83-E3C3E18BABF0</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="002D74AF-DFB2-EAF8-E205-9EC5CEB48B79"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="53968092-F995-12BA-99C0-F1A1794D67E6" name="SummaryExchangeRelation_Exchange_FK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<generatorID>8CADCBB4-C027-B427-02B1-C5D62E23A033</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FADC94DD-D6C4-66C8-E6CE-35F4CFE6837A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

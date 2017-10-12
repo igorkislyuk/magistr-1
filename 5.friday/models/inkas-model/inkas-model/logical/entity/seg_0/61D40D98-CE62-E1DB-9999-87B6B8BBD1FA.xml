@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="61D40D98-CE62-E1DB-9999-87B6B8BBD1FA" name="RouteTimestamp">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:44:28 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="14F459C4-9E94-5087-2D3A-760C1CA2B1F2">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:44:33 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="time" id="94ACCC68-09A6-C803-C10F-09341CB21488">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:44:33 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="car_id" id="F527F8A2-A39E-19D2-8187-DBDE1C469465">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 16:26:08 UTC</createdTime>
+<generatorID>65AE9E3F-8CAA-ECED-46EE-62C72D455E09</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<referedAttribute>48A28122-BB05-E347-B4AC-063BEA1D2BEA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="address" id="63B3E5A7-E1BB-CF99-936E-94A75017C5B3">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 16:26:26 UTC</createdTime>
+<generatorID>AEF29E84-6B0E-BC53-15BA-347F48BD5FFD</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<referedAttribute>9E9F3641-F940-5E64-C026-33A9214663D1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AD9CFF18-6A1B-4DA0-B320-FD073611834F" name="Route PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:44:44 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>14F459C4-9E94-5087-2D3A-760C1CA2B1F2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

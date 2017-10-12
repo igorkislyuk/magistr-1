@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5C770C2A-D83A-C783-B988-16A2DB05854E" name="Exchange">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>781DF925-C0AB-A486-BB6D-D162C9CF6AC9</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F369FBD0-0157-AA1E-9C68-080A41C8D758">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>C0AE70C5-8327-09EA-A735-2B1FB631BF3D</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="amount" id="013D88EC-B78D-BF92-E7A5-FF1EE02D4F31">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>7C023C19-340C-8DF4-9BF5-F1DE0A56582C</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ordered_times" id="451B9742-6A02-9358-02E2-01B9351E3F6A">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>3AE6F53B-5E6C-E86F-7B95-4C1B7F706E20</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nominals_id" id="540E1813-D938-2EE2-F0B8-3D81CC36FB02">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>E8367EB3-6332-F9DE-89E1-C829AEE5B5E9</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6D5F7218-9777-5EC8-19D1-1C91CA2B3332" referredColumn="F96AA5F2-6604-42D2-CFE7-C803DF426279"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5912D128-26FD-1CD0-0B16-F36CE0FFAA6F" name="Exchange_PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>4F85F176-0796-1955-5FDA-56D1F9D66A0D</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F369FBD0-0157-AA1E-9C68-080A41C8D758"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D4B79D8-576F-274D-F7D6-D06459336F79" name="Exchange__IDX">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>3DF51F83-4DC3-F632-2EDB-E003E63B578F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="540E1813-D938-2EE2-F0B8-3D81CC36FB02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66EDD209-9199-72C0-0A43-8499B34D584A" name="Exchange_Nominals_FK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<generatorID>3DF51F83-4DC3-F632-2EDB-E003E63B578F</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="540E1813-D938-2EE2-F0B8-3D81CC36FB02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

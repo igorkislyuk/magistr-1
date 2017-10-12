@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="545F5B4B-65DD-5677-604D-1586C00862AE" name="ManRouteTimestampRelation">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>2596C625-35DB-F5F2-355E-FC1823D534CB</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="User_id" id="FBC99B5F-7888-5AA3-86FA-15AE6B96F68C">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>34EA775C-1116-5013-F064-ABB7FDD66828</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="56965695-66F7-7FA9-8C08-8ECEEBBB1AFD" referredColumn="E99846C0-0336-318E-2760-209C832B6644"/>
+</associations>
+</Column>
+<Column name="RouteTimestamp_id" id="F04560CE-339D-5F22-3AC5-95AA4A8D3C73">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>382E8461-C2E0-0CCC-4450-CAE974AEDB27</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="61182771-1F58-1D76-FD61-51AD3B75824E" referredColumn="E91DE09A-DB87-3FB3-459D-B82077272AF5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A572DB70-0BDD-ABFC-3C3B-F2F5E967A3D9" name="ManRouteTimestampRelation__IDX">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C5B1C9F2-07B7-8AAB-17F2-FAC627CC72E4</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="F04560CE-339D-5F22-3AC5-95AA4A8D3C73"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="208CC98E-F60E-15BC-DFC4-2715C120EDD6" name="ManRouteTimestampRelation__IDXv1">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>7B320315-FBCB-24C6-D9DE-996AC4CD065C</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="FBC99B5F-7888-5AA3-86FA-15AE6B96F68C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E36C7F7A-BCF8-3073-E11F-80BEF2E5D83C" name="ManRouteTimestampRelation_RouteTimestamp_FK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<generatorID>C5B1C9F2-07B7-8AAB-17F2-FAC627CC72E4</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F04560CE-339D-5F22-3AC5-95AA4A8D3C73"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0CEF780-1397-9FA0-E925-163BFC9E457C" name="ManRouteTimestampRelation_User_FK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<generatorID>7B320315-FBCB-24C6-D9DE-996AC4CD065C</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBC99B5F-7888-5AA3-86FA-15AE6B96F68C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D078AB8C-0B48-086E-2225-47BE39AB7E46" name="DeliveryAttributes">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:42:57 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="6D7CB133-2922-7902-0903-303097DC102E">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:43:06 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="check_number" id="0E20E344-BB9E-9155-B254-94D02AA04E8A">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-06 15:43:06 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="summary_id" id="67213997-24C4-D636-6044-976BE44FCA52">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 13:44:54 UTC</createdTime>
+<generatorID>F255D40B-62B2-F096-9FCC-6139E57DAEEA</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<referedAttribute>9AB9AF9B-8AF5-D5A7-8AE3-49C6F885F8BA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3A29E2B8-1FD8-C003-FB8F-58A604B2B6DB" name="DeliveryAttributes PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 13:41:08 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<engineerTo>
+<item key="7ACD9447-E013-B850-12E0-6AF75FC0C4CC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6D7CB133-2922-7902-0903-303097DC102E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

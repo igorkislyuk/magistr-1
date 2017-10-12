@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3F759A85-BE90-6D6D-E609-3403E6493023" name="DeliveryAttributes">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>D078AB8C-0B48-086E-2225-47BE39AB7E46</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F9CBE2FB-C727-8C44-D366-852336004F91">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>6D7CB133-2922-7902-0903-303097DC102E</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="check_number" id="34F569C7-BA9E-5828-61B6-74697A53AAAD">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>0E20E344-BB9E-9155-B254-94D02AA04E8A</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Summary_id" id="270DB5EF-9BF6-D181-814D-1ECCEF9C636F">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>67213997-24C4-D636-6044-976BE44FCA52</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7AB5986E-80CE-2B41-4A26-35A5BA2E794A" referredColumn="34C2857B-E98C-F26D-D20B-BB1EB3609ABA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A4382B69-99C2-C152-BFD5-FC8C2F4086D9" name="DeliveryAttributes_PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:04 UTC</createdTime>
+<generatorID>3A29E2B8-1FD8-C003-FB8F-58A604B2B6DB</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9CBE2FB-C727-8C44-D366-852336004F91"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="99E733CB-F6B0-4109-9665-D72C2BF042BB" name="DeliveryAttributes__IDX">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F255D40B-62B2-F096-9FCC-6139E57DAEEA</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="270DB5EF-9BF6-D181-814D-1ECCEF9C636F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78806C2F-B5F3-0051-616F-B449D24E838B" name="DeliveryAttributes_Summary_FK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 16:00:05 UTC</createdTime>
+<generatorID>F255D40B-62B2-F096-9FCC-6139E57DAEEA</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="270DB5EF-9BF6-D181-814D-1ECCEF9C636F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<cwd_glossary name="Inkas Glossary" description="generated from logical model of design inkas-model" id="2942A7FF-F5F7-778E-58D2-1C8B46763DD6" incomplete_modifiers="true" >
+
+   <glossaryWord name="Address" plural="ADDRESSES" abbreviation="ADD" alt_abbreviation="" id="C2B05EF2-C6CE-EE71-B04C-00503B380F8E" import_id="" description="" />
+   <glossaryWord name="Appeal" plural="" abbreviation="" alt_abbreviation="" id="07568141-C0EF-BC41-2072-4FE00BF0A76C" import_id="" description="" />
+   <glossaryWord name="Car" plural="" abbreviation="" alt_abbreviation="" id="B8D2BF22-666A-5638-BAC0-986EF6D81D8E" import_id="" description="" />
+   <glossaryWord name="DeliveryAttributes" plural="" abbreviation="" alt_abbreviation="" id="90B32BE8-EE29-C725-F207-B401B38C4E5F" import_id="" description="" />
+   <glossaryWord name="Exchange" plural="" abbreviation="EXH" alt_abbreviation="" id="4E82BD90-2C3A-3EDE-F0C1-BC45D0A51D99" import_id="" description="" />
+   <glossaryWord name="ManRouteTimestampRelation" plural="" abbreviation="" alt_abbreviation="" id="DE4BA803-24DD-7042-DC7D-AAA2E06C3FFD" import_id="" description="" />
+   <glossaryWord name="Nominals" plural="" abbreviation="" alt_abbreviation="" id="F55E7069-A89D-DC2C-A502-82DD50FE3984" import_id="" description="" />
+   <glossaryWord name="Object" plural="" abbreviation="OBJ" alt_abbreviation="" id="A704CD68-A1F2-DDC7-11CC-EE56A10BCD66" import_id="" description="" />
+   <glossaryWord name="ObjectAmountRelation" plural="" abbreviation="" alt_abbreviation="" id="AF2A12D3-0D54-8F77-6BF7-8622731D4CFE" import_id="" description="" />
+   <glossaryWord name="Order" plural="" abbreviation="ORD" alt_abbreviation="" id="22C4E8C4-FCD5-F1C8-B2D3-B68356E9805E" import_id="" description="" />
+   <glossaryWord name="PK" plural="" abbreviation="" alt_abbreviation="" id="9A857A9A-0CEC-4B53-3B67-D3BEA6C1D0A4" import_id="" description="" />
+   <glossaryWord name="Route" plural="" abbreviation="" alt_abbreviation="" id="94400D60-97F9-C61A-A233-2341DBEBFE46" import_id="" description="" />
+   <glossaryWord name="RouteTimestamp" plural="" abbreviation="" alt_abbreviation="" id="3ADEF988-498A-8630-064E-002B4E294D30" import_id="" description="" />
+   <glossaryWord name="Session" plural="" abbreviation="SES" alt_abbreviation="" id="48AFD234-9E3E-D31E-8385-03E117D14AA9" import_id="" description="" />
+   <glossaryWord name="Settings" plural="" abbreviation="" alt_abbreviation="" id="9D32C903-FF37-355E-C37A-9FD3BC7EF04D" import_id="" description="" />
+   <glossaryWord name="Summary" plural="" abbreviation="SUM" alt_abbreviation="" id="49E1AC2B-9ECB-8DC7-06E9-D7FB8323F58B" import_id="" description="" />
+   <glossaryWord name="SummaryExchangeRelation" plural="" abbreviation="" alt_abbreviation="" id="ED11E37B-6AA7-6202-505E-391848248264" import_id="" description="" />
+   <glossaryWord name="User" plural="" abbreviation="USR" alt_abbreviation="" id="468F32B9-9DA7-FB85-65C4-893EB376C371" import_id="" description="" />
+   <glossaryWord name="UserObjectRelation" plural="" abbreviation="" alt_abbreviation="" id="5E48BB00-E1AA-E9FC-14E9-183812F3F498" import_id="" description="" />
+   <glossaryWord name="amount" plural="" abbreviation="AMT" alt_abbreviation="" id="303274CB-611C-6193-D643-6430FE1940A4" import_id="" description="" />
+   <glossaryWord name="apprtment" plural="" abbreviation="" alt_abbreviation="" id="83BEC5C7-D8E2-75CB-7008-02582AEC054F" import_id="" description="" />
+   <glossaryWord name="birthday" plural="" abbreviation="" alt_abbreviation="" id="E11B5615-5682-9118-0CD6-0579B152E0FB" import_id="" description="" />
+   <glossaryWord name="building" plural="" abbreviation="BLD" alt_abbreviation="" id="EB00017E-8458-F6BF-5DD0-2BBEE4C62445" import_id="" description="" />
+   <glossaryWord name="capacity" plural="" abbreviation="CPA" alt_abbreviation="" id="B1FCAF85-DDB7-248D-3589-87218C2177A1" import_id="" description="" />
+   <glossaryWord name="check_number" plural="" abbreviation="" alt_abbreviation="" id="43D8C6ED-65FB-37D4-BFB1-A053E131057F" import_id="" description="" />
+   <glossaryWord name="city" plural="CITIES" abbreviation="CIT" alt_abbreviation="" id="FB6A36EC-779F-8438-DDE4-441E0A0B789E" import_id="" description="" />
+   <glossaryWord name="code" plural="" abbreviation="COD" alt_abbreviation="" id="97CD4B9C-20EE-FF33-7473-94E6656A5CB0" import_id="" description="" />
+   <glossaryWord name="created_date" plural="" abbreviation="" alt_abbreviation="" id="E55679C9-201B-19FE-F5BA-0D0345A444F9" import_id="" description="" />
+   <glossaryWord name="date" plural="" abbreviation="DTE" alt_abbreviation="" id="A208FBB9-2583-CE5E-5DB0-2DEA582AB46C" import_id="" description="" />
+   <glossaryWord name="description" plural="" abbreviation="DSC" alt_abbreviation="" id="E186D824-C1BC-7D88-5F93-A2397B731B05" import_id="" description="" />
+   <glossaryWord name="district" plural="" abbreviation="" alt_abbreviation="" id="4FC91909-FF1D-A3CC-07AB-02E45551E1EC" import_id="" description="" />
+   <glossaryWord name="email" plural="" abbreviation="" alt_abbreviation="" id="6A6D543A-5ED0-9A31-D32C-20030934182D" import_id="" description="" />
+   <glossaryWord name="end_using_date" plural="" abbreviation="" alt_abbreviation="" id="D2A89091-DE60-4841-7DC0-6303BB9F9BFA" import_id="" description="" />
+   <glossaryWord name="id" plural="" abbreviation="" alt_abbreviation="" id="9302C9F2-6980-45FA-B9E5-FABEA1971697" import_id="" description="" />
+   <glossaryWord name="last_active" plural="" abbreviation="" alt_abbreviation="" id="E363CEC6-BD85-8A69-35AC-4E4250559597" import_id="" description="" />
+   <glossaryWord name="multiply_index" plural="" abbreviation="" alt_abbreviation="" id="910671DF-6D4B-FFE9-07F4-9096EF48FAE1" import_id="" description="" />
+   <glossaryWord name="name" plural="" abbreviation="" alt_abbreviation="" id="ED4EDD0B-7769-85BE-BE85-A5D05971B643" import_id="" description="" />
+   <glossaryWord name="number" plural="" abbreviation="" alt_abbreviation="" id="56515FF0-4DD8-470B-EFE9-E6AB37D3FF40" import_id="" description="" />
+   <glossaryWord name="object_type" plural="" abbreviation="" alt_abbreviation="" id="98BFA5C9-756A-2EC3-0757-CD5141703B9B" import_id="" description="" />
+   <glossaryWord name="ordered_times" plural="" abbreviation="" alt_abbreviation="" id="75844BC9-C16E-611F-B814-3273DBD67E23" import_id="" description="" />
+   <glossaryWord name="pass" plural="PASSES" abbreviation="" alt_abbreviation="" id="3379C6DA-CECE-D6DA-4434-185F8ED12B9E" import_id="" description="" />
+   <glossaryWord name="pass_hash" plural="" abbreviation="" alt_abbreviation="" id="02BC3A98-6326-7078-26E3-B37AFF756704" import_id="" description="" />
+   <glossaryWord name="passport" plural="" abbreviation="" alt_abbreviation="" id="10198932-796D-6316-E2DE-AB4B483156FC" import_id="" description="" />
+   <glossaryWord name="phone_number" plural="" abbreviation="" alt_abbreviation="" id="CC0F33EE-9C8A-DDB8-5BB6-123166644B4A" import_id="" description="" />
+   <glossaryWord name="postcode" plural="" abbreviation="" alt_abbreviation="" id="F13E35D4-B0A8-36A5-F5E5-E34DD8F8980B" import_id="" description="" />
+   <glossaryWord name="push_enabled" plural="" abbreviation="" alt_abbreviation="" id="A05F269A-6D48-6F39-7E79-788111A9049F" import_id="" description="" />
+   <glossaryWord name="rating" plural="" abbreviation="RTG" alt_abbreviation="" id="EDF1A303-74FD-21B4-CBEF-EAF2A65EF129" import_id="" description="" />
+   <glossaryWord name="session_id" plural="" abbreviation="" alt_abbreviation="" id="A8AF2D6E-A800-BAF7-FDD6-28BA651066E8" import_id="" description="" />
+   <glossaryWord name="show_closed_object" plural="" abbreviation="" alt_abbreviation="" id="CD138028-9B4D-21AE-20A7-9AFBF18AD3F4" import_id="" description="" />
+   <glossaryWord name="start_time" plural="" abbreviation="" alt_abbreviation="" id="EDDC4397-09F3-3E3C-3E27-0889B35FBA8F" import_id="" description="" />
+   <glossaryWord name="start_using_date" plural="" abbreviation="" alt_abbreviation="" id="00CDB535-E19B-BFC6-550E-715C3FA5C854" import_id="" description="" />
+   <glossaryWord name="state" plural="" abbreviation="STE" alt_abbreviation="" id="50F9B96C-6332-F65A-E875-DA0EBC6B0BA3" import_id="" description="" />
+   <glossaryWord name="street" plural="" abbreviation="STR" alt_abbreviation="" id="CEDD8E8C-AA6B-C57C-C8FA-B051C1943637" import_id="" description="" />
+   <glossaryWord name="street_number" plural="" abbreviation="" alt_abbreviation="" id="E62C5187-2734-D428-B2EB-73E074770452" import_id="" description="" />
+   <glossaryWord name="surname" plural="" abbreviation="" alt_abbreviation="" id="90CB8960-B3D5-964A-AA61-BE19A8E0ABFD" import_id="" description="" />
+   <glossaryWord name="system_type" plural="" abbreviation="" alt_abbreviation="" id="2F71D2D1-9751-391C-E1DD-768487515EAF" import_id="" description="" />
+   <glossaryWord name="terminated" plural="" abbreviation="" alt_abbreviation="" id="065BC953-66B4-397F-69F3-7DEA0A680327" import_id="" description="" />
+   <glossaryWord name="time" plural="" abbreviation="TME" alt_abbreviation="" id="3BA73BDC-A582-B930-C1B2-4F300BB028FE" import_id="" description="" />
+   <glossaryWord name="total" plural="" abbreviation="TOT" alt_abbreviation="" id="CBFB4876-9232-8359-15F6-78A261085050" import_id="" description="" />
+   <glossaryWord name="total_amount" plural="" abbreviation="" alt_abbreviation="" id="FF3DF29F-4CCA-D2E4-2F49-87A473311144" import_id="" description="" />
+   <glossaryWord name="type" plural="" abbreviation="TYP" alt_abbreviation="" id="8A99D224-5616-DAAE-0688-59B558BB120F" import_id="" description="" />
+   <glossaryWord name="user_display_name" plural="" abbreviation="" alt_abbreviation="" id="0981FADC-7884-2E54-EEAA-C29D249DE74E" import_id="" description="" />
+   <glossaryWord name="user_id" plural="" abbreviation="" alt_abbreviation="" id="08D0025A-2CCC-C06E-21A6-D234BB4CEFBC" import_id="" description="" />
+   <glossaryWord name="user_type" plural="" abbreviation="" alt_abbreviation="" id="0DF685AD-1F41-111A-C28E-BF2762B9C921" import_id="" description="" />
+   <glossaryWord name="weight" plural="" abbreviation="WGT" alt_abbreviation="" id="CE3D7596-3939-9890-6CD4-AF4480B15351" import_id="" description="" />
+
+</cwd_glossary>
