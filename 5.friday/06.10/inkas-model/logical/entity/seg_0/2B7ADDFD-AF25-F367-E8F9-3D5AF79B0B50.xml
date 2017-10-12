@@ -12,32 +12,23 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="summary_id" id="38332CFC-827F-3CC5-0A02-498D8CEADC55">
+<Attribute name="summary_id" id="035D66EF-C053-B7BE-E4C7-5EA79BA0EF3C">
 <createdBy>igorkislyuk</createdBy>
-<createdTime>2017-10-06 16:01:05 UTC</createdTime>
-<ownerDesignName>inkas-model</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="exchange_id" id="0C4DD6C0-58C9-6C23-E7C3-948059DFAB15">
-<createdBy>igorkislyuk</createdBy>
-<createdTime>2017-10-06 16:01:06 UTC</createdTime>
-<ownerDesignName>inkas-model</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id" id="4690C1BC-0643-65DB-0848-4789B39A2CD9">
-<createdBy>igorkislyuk</createdBy>
-<createdTime>2017-10-06 16:01:38 UTC</createdTime>
-<generatorID>F283107B-E14F-E967-F587-670834F3BCBD</generatorID>
+<createdTime>2017-10-12 13:43:09 UTC</createdTime>
+<generatorID>5148779F-9E74-448F-1E83-E3C3E18BABF0</generatorID>
 <ownerDesignName>inkas-model</ownerDesignName>
 <referedAttribute>9AB9AF9B-8AF5-D5A7-8AE3-49C6F885F8BA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="exchange_id" id="50BAAAF0-811C-3385-82B6-7AA990B80E3B">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 13:43:42 UTC</createdTime>
+<generatorID>8CADCBB4-C027-B427-02B1-C5D62E23A033</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<referedAttribute>C0AE70C5-8327-09EA-A735-2B1FB631BF3D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT057</logicalDatatype>

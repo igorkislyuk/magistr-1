@@ -41,7 +41,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nominal_id1" id="E8367EB3-6332-F9DE-89E1-C829AEE5B5E9">
+<Attribute name="nominal_id" id="E8367EB3-6332-F9DE-89E1-C829AEE5B5E9">
 <createdBy>igorkislyuk</createdBy>
 <createdTime>2017-10-06 16:24:15 UTC</createdTime>
 <generatorID>3DF51F83-4DC3-F632-2EDB-E003E63B578F</generatorID>
@@ -53,4 +53,15 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4F85F176-0796-1955-5FDA-56D1F9D66A0D" name="Exchange PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 13:42:48 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C0AE70C5-8327-09EA-A735-2B1FB631BF3D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

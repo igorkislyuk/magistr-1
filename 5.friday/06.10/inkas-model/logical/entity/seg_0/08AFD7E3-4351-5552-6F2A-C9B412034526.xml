@@ -16,7 +16,6 @@
 <createdBy>igorkislyuk</createdBy>
 <createdTime>2017-10-06 15:28:36 UTC</createdTime>
 <ownerDesignName>inkas-model</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT057</logicalDatatype>
@@ -75,4 +74,15 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5DC92427-4FFC-BA5B-9ABC-C0638CF29F33" name="Session PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 13:46:39 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>25E37F58-0ABA-89A0-881B-16083756440A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

@@ -51,6 +51,17 @@
 <logicalDatatype>LOGDT034</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id1" id="04FAC297-D156-2D12-F349-00BBC7BF3F58">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 13:46:40 UTC</createdTime>
+<generatorID>A396DE60-8FB2-DC1E-769F-D4373942F26C</generatorID>
+<ownerDesignName>inkas-model</ownerDesignName>
+<referedAttribute>25E37F58-0ABA-89A0-881B-16083756440A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="C59229F0-536A-0DDA-2AB7-25367FF01BE0" name="Settings PK">

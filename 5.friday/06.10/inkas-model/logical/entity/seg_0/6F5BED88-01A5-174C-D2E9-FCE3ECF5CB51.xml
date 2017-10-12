@@ -21,16 +21,6 @@
 <logicalDatatype>LOGDT057</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="object_id" id="DDA2D3DD-0296-156F-2BA9-EB039AC0CB15">
-<createdBy>KislI</createdBy>
-<createdTime>2017-09-08 15:24:43 UTC</createdTime>
-<ownerDesignName>inkas-model</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="name" id="51BA8575-7ABA-1AC3-B555-90970426CE82">
 <createdBy>KislI</createdBy>
 <createdTime>2017-09-08 15:45:07 UTC</createdTime>
@@ -72,7 +62,7 @@
 <logicalDatatype>LOGDT036</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="code" id="F7A6C509-B81D-3BE9-0BCE-4B472C69AFF8">
+<Attribute name="object_code" id="F7A6C509-B81D-3BE9-0BCE-4B472C69AFF8">
 <createdBy>igorkislyuk</createdBy>
 <createdTime>2017-10-06 15:54:31 UTC</createdTime>
 <generatorID>EC7F3D7C-6EFC-5735-F8DA-B4293B2467E7</generatorID>
@@ -83,22 +73,23 @@
 <logicalDatatype>LOGDT057</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="user_id" id="000AB11D-C42D-47F6-47ED-909703E764AC">
+<Attribute name="user_id" id="FDD7D1F4-40C3-0F33-8256-A92D76FF0E1A">
 <createdBy>igorkislyuk</createdBy>
-<createdTime>2017-10-06 15:59:47 UTC</createdTime>
+<createdTime>2017-10-12 13:40:00 UTC</createdTime>
+<generatorID>217DC443-705F-7990-CBC4-1DF0DD155791</generatorID>
 <ownerDesignName>inkas-model</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>1F1914F6-14CA-E39F-1E02-A0387EAF77A9</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT057</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="delivery_attributes_id" id="DC5C0A1C-9816-0713-EFB5-3890750AFE97">
+<Attribute name="delivery_attributes_id" id="0692C65F-81AB-D130-925C-A0C8C073EB66">
 <createdBy>igorkislyuk</createdBy>
-<createdTime>2017-10-06 16:00:01 UTC</createdTime>
-<generatorID>B8F7CF06-AEE2-9B41-0586-5CE03A2C45FF</generatorID>
+<createdTime>2017-10-12 13:41:09 UTC</createdTime>
+<generatorID>B088C573-A808-D66C-D67A-E43F4DA9E80A</generatorID>
 <ownerDesignName>inkas-model</ownerDesignName>
-<referedAttribute>1F1914F6-14CA-E39F-1E02-A0387EAF77A9</referedAttribute>
+<referedAttribute>6D7CB133-2922-7902-0903-303097DC102E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT057</logicalDatatype>

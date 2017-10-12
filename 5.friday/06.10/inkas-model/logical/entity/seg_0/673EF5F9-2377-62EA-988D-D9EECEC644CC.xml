@@ -71,11 +71,12 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="object_id" id="E78A1C68-2779-EAA1-BE53-5FE6A0E05823">
+<Attribute name="object_code" id="8D5A06B1-53A6-4316-C449-4897082FC816">
 <createdBy>igorkislyuk</createdBy>
-<createdTime>2017-10-06 15:40:35 UTC</createdTime>
+<createdTime>2017-10-12 13:46:15 UTC</createdTime>
+<generatorID>9AA28C52-B1B7-A05E-6812-5FC5CC1AC56F</generatorID>
 <ownerDesignName>inkas-model</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>684597DA-85F9-12E4-EEB0-D69C4F326F4E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT057</logicalDatatype>

@@ -91,17 +91,6 @@
 <logicalDatatype>LOGDT036</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="code" id="457E49E3-E13A-B552-CF89-31E04777A747">
-<createdBy>igorkislyuk</createdBy>
-<createdTime>2017-10-06 15:49:25 UTC</createdTime>
-<generatorID>A7C01FA3-CFBA-16D2-306A-9D36AAB3F25C</generatorID>
-<ownerDesignName>inkas-model</ownerDesignName>
-<referedAttribute>684597DA-85F9-12E4-EEB0-D69C4F326F4E</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7B399821-21C3-027B-1242-64F7C399B7A8" name="Address PK">

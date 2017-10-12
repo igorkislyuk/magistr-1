@@ -16,7 +16,6 @@
 <createdBy>igorkislyuk</createdBy>
 <createdTime>2017-10-06 15:43:06 UTC</createdTime>
 <ownerDesignName>inkas-model</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT057</logicalDatatype>
@@ -32,15 +31,27 @@
 <logicalDatatype>LOGDT036</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="summary_id" id="A541C8E2-9AA5-9D57-DA47-1B677467A211">
+<Attribute name="summary_id" id="67213997-24C4-D636-6044-976BE44FCA52">
 <createdBy>igorkislyuk</createdBy>
-<createdTime>2017-10-06 15:43:06 UTC</createdTime>
+<createdTime>2017-10-12 13:44:54 UTC</createdTime>
+<generatorID>F255D40B-62B2-F096-9FCC-6139E57DAEEA</generatorID>
 <ownerDesignName>inkas-model</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9AB9AF9B-8AF5-D5A7-8AE3-49C6F885F8BA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT057</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3A29E2B8-1FD8-C003-FB8F-58A604B2B6DB" name="DeliveryAttributes PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 13:41:08 UTC</createdTime>
+<ownerDesignName>inkas-model</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6D7CB133-2922-7902-0903-303097DC102E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

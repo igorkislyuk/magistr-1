@@ -1,15 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_9" directorySegmentName="seg_0" id="9B66737C-42AD-706D-B183-2AEAC8D0F079">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="exchange_id" directorySegmentName="seg_0" id="8CADCBB4-C027-B427-02B1-C5D62E23A033">
 <createdBy>igorkislyuk</createdBy>
-<createdTime>2017-10-06 15:54:06 UTC</createdTime>
+<createdTime>2017-10-12 13:43:42 UTC</createdTime>
 <ownerDesignName>inkas-model</ownerDesignName>
+<sourcePk>4F85F176-0796-1955-5FDA-56D1F9D66A0D</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>D078AB8C-0B48-086E-2225-47BE39AB7E46</sourceEntity>
+<sourceEntity>781DF925-C0AB-A486-BB6D-D162C9CF6AC9</sourceEntity>
 <targetCardinalityString>1</targetCardinalityString>
-<targetEntity>599F79BE-8309-665E-7527-4BB685F52EDF</targetEntity>
+<targetEntity>2B7ADDFD-AF25-F367-E8F9-3D5AF79B0B50</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

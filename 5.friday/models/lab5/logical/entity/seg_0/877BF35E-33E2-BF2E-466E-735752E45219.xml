@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="877BF35E-33E2-BF2E-466E-735752E45219" name="Server">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 14:31:38 UTC</createdTime>
+<ownerDesignName>lab5</ownerDesignName>
+<engineerTo>
+<item key="E800BB2A-4D93-13A2-3B51-C1E26F510DA2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="99A07D9B-D633-6DA0-2C6F-E24987104631">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 14:33:20 UTC</createdTime>
+<ownerDesignName>lab5</ownerDesignName>
+<engineerTo>
+<item key="E800BB2A-4D93-13A2-3B51-C1E26F510DA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="subject" id="02DE1ACB-92A2-BA4D-4DAD-36718344EBDB">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 14:33:20 UTC</createdTime>
+<ownerDesignName>lab5</ownerDesignName>
+<engineerTo>
+<item key="E800BB2A-4D93-13A2-3B51-C1E26F510DA2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F60109FF-8CAD-7247-E1B5-3FF1B22D405D" name="Server PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 14:33:45 UTC</createdTime>
+<ownerDesignName>lab5</ownerDesignName>
+<engineerTo>
+<item key="E800BB2A-4D93-13A2-3B51-C1E26F510DA2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>99A07D9B-D633-6DA0-2C6F-E24987104631</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

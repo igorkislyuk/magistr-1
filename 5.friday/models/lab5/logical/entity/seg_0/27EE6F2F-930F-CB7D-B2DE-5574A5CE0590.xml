@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="27EE6F2F-930F-CB7D-B2DE-5574A5CE0590" name="User">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 14:31:34 UTC</createdTime>
+<ownerDesignName>lab5</ownerDesignName>
+<engineerTo>
+<item key="E800BB2A-4D93-13A2-3B51-C1E26F510DA2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="A73D8FF6-B5BF-015E-695F-DAF22B3B0F32">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 14:32:06 UTC</createdTime>
+<ownerDesignName>lab5</ownerDesignName>
+<engineerTo>
+<item key="E800BB2A-4D93-13A2-3B51-C1E26F510DA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="616C7ED9-C8C4-3047-32B4-0C333418A69A">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 14:32:06 UTC</createdTime>
+<ownerDesignName>lab5</ownerDesignName>
+<engineerTo>
+<item key="E800BB2A-4D93-13A2-3B51-C1E26F510DA2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT036</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="server_id" id="B66F9186-8EAF-7AEA-9967-49FFB333824A">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 14:35:42 UTC</createdTime>
+<generatorID>D3F9A023-1A54-A5A2-A6E4-78629CBF6C2F</generatorID>
+<ownerDesignName>lab5</ownerDesignName>
+<engineerTo>
+<item key="E800BB2A-4D93-13A2-3B51-C1E26F510DA2" value="true"/>
+</engineerTo>
+<referedAttribute>99A07D9B-D633-6DA0-2C6F-E24987104631</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CE1EA829-9D4A-44FB-FD5A-B4C5A72F4C50" name="Message PK">
+<createdBy>igorkislyuk</createdBy>
+<createdTime>2017-10-12 14:33:48 UTC</createdTime>
+<ownerDesignName>lab5</ownerDesignName>
+<engineerTo>
+<item key="E800BB2A-4D93-13A2-3B51-C1E26F510DA2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A73D8FF6-B5BF-015E-695F-DAF22B3B0F32</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

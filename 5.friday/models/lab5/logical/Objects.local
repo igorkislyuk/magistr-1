@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="ACCD0AAC-1D3F-4AAE-6F4F-514E3BAC1590" name="Message" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="8C838254-BAEE-498B-7E72-54E314C35193" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="877BF35E-33E2-BF2E-466E-735752E45219" name="Server" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="8C838254-BAEE-498B-7E72-54E314C35193" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="27EE6F2F-930F-CB7D-B2DE-5574A5CE0590" name="User" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="8C838254-BAEE-498B-7E72-54E314C35193" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="D3F9A023-1A54-A5A2-A6E4-78629CBF6C2F" name="server_id" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="8C838254-BAEE-498B-7E72-54E314C35193" propertySourceId="877BF35E-33E2-BF2E-466E-735752E45219" propertyTargetId="27EE6F2F-930F-CB7D-B2DE-5574A5CE0590"/>
+   <object objectType="Relation" objectID="584435C0-A38F-A37D-619B-28D935E8FB83" name="user_id" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="8C838254-BAEE-498B-7E72-54E314C35193" propertySourceId="27EE6F2F-930F-CB7D-B2DE-5574A5CE0590" propertyTargetId="ACCD0AAC-1D3F-4AAE-6F4F-514E3BAC1590"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>
