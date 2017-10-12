@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F03A1F8-A27D-462A-D125-004379848DF6" name="PAYMENTS">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>6EDA6BD1-E32F-5029-3018-6CF48EDDACCE</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<abbreviation>PAYMENTS</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="CFE1F0C6-FC5D-0C51-F55C-573AA726021D">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>B292204C-9BCE-DC2A-5760-9DAABCE643FA</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATE" id="C9E9C67E-6CD2-5F1E-DA03-9A2D02A8EEFE">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>9AB3A9ED-5870-4982-0ED5-0F651BDBE47F</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENT_METHOD" id="9AA39C6B-2FCC-6E87-F5A4-2D5E092B0122">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>B6CFD71F-ED62-4EF6-BF3B-91264F859DA3</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENT_STATUS" id="96174F46-956A-93D5-00DD-EA2DEB51AFB8">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>8DAFC688-C2BA-D809-B28F-7B2BF04F30A1</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRAININGS_ID" id="27B9F85E-2D76-7982-7D93-F8B223559BF3">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>15494606-86DD-F78D-6E50-D5216A05D1A5</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E6B3E5D8-501A-100B-1938-267B2760DF5E" referredColumn="B834E427-C7EA-4642-F4D9-70AEAF95D31A"/>
+</associations>
+</Column>
+<Column name="USERS_ID" id="723F8C40-0FC9-B7C4-5E6E-09CD49703D1F">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>FB0CC25B-D274-3D0E-3B5E-85223212105C</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A49D9892-3447-3212-EB01-29348B6EA9AF" referredColumn="6A12B1A2-CC89-B7AF-159B-D8D36CB65882"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="24CB170F-4D30-D359-C9F2-7652B4F99FC8" name="PAYMENTS_PK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>D39E0AD7-68BD-5B07-F34A-7B67CBEDE4A6</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFE1F0C6-FC5D-0C51-F55C-573AA726021D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5942D6DF-097E-D072-743B-467786076A66" name="PAYMENTS_TRAININGS_FK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>061CAD58-2D7B-1184-3FF8-8C30D9116B23</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27B9F85E-2D76-7982-7D93-F8B223559BF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C23DC3A4-4FB8-3033-BA4C-46E65BED337E" name="PAYMENTS_USERS_FK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>FBB7EB01-1268-1614-8AA5-4138F66EBA60</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="723F8C40-0FC9-B7C4-5E6E-09CD49703D1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

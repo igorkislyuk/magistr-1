@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BEF5AAD7-FCC8-69BA-2CE3-109745511F14" name="Coaches">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-15 17:28:29 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>COACHES</preferredAbbreviation>
+<shortName>COACHES</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="A642FEAE-B9E9-83E1-D471-0337265EEC7D">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-15 17:28:37 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GRADE" id="4841105A-89F1-280F-B3C5-B5815BB0CA6D">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-15 17:29:45 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USER_ID" id="9814CBDF-08EA-4E2C-757A-44DB94FC39FB">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-15 17:30:36 UTC</createdTime>
+<generatorID>18F89013-BA9D-18B9-98D1-7752084EFB1B</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<referedAttribute>E02ED0C5-2E23-CEB2-7125-77A8E2C9AE1B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TRAINING_STATUS" id="ABDF45B1-8D15-30D4-83C2-7F2EC7547CB7">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-16 13:39:27 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F24881E1-E326-F2E6-9B22-02B51456D8B4" name="Coaches PK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-15 17:33:59 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A642FEAE-B9E9-83E1-D471-0337265EEC7D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

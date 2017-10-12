@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1F4EBA89-1144-88D3-DC6B-8C43B009475A" containerWithKeyObject="1AF9331F-2C8C-AB40-76E8-556D749C3391" localFKIndex="0135D22E-3FB0-4087-E464-7E2B5A83B397" name="TRAININGS_SERVICES_FK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>983A2882-59CB-31A3-5B25-D17825F50B82</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>18D533A6-6DD1-8F14-9BBA-A5E19E07BF35</referredTableID>
+<keyObject>07D0D404-0E77-230A-62EA-9059FF6DE53F</keyObject>
+<referredKeyID>07D0D404-0E77-230A-62EA-9059FF6DE53F</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

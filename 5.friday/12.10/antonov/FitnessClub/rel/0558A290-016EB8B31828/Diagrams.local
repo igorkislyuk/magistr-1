@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="124B96DD-1443-041A-2F81-92CC4B86063E" name="FitnessClub" visible="true"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

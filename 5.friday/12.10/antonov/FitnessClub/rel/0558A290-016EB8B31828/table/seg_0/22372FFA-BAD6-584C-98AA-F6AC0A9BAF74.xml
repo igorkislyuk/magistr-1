@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="22372FFA-BAD6-584C-98AA-F6AC0A9BAF74" name="COACHESSPECS">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>671CA43F-73F6-DC97-2F2E-D82A24572A89</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<abbreviation>COACHESSPECS</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="BF18B8B1-832F-81C9-3037-E8467B4BD9BB">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>3CDF640B-ACF7-2872-C28F-E4A5A6C7C740</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVICES_ID" id="A70D9AF7-AD5B-6305-8B2D-3F7635D4D054">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>0ADD26E3-16BA-7E5B-DC0F-00636D4E0ED9</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="798CCA51-B8AF-7C51-6B3E-ACCEB952CDFB" referredColumn="42C04F1F-C440-1F72-0CB8-1F30549B20E9"/>
+</associations>
+</Column>
+<Column name="COACHES_ID" id="F059FC00-0346-A0D4-F344-A037A537D3C7">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>17407301-2CCA-5E4F-6FF8-6A468F253D19</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DC90EA84-4AAC-EE4F-B51E-BABCA88CADA1" referredColumn="1E6E2913-EF68-DB12-5E86-04EAC136B2C6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AC2B7AE9-071F-C629-57CC-26BD4E3A87E7" name="COACHESSPECS_PK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>5D59C497-BD01-BCCD-E33B-46D9FDE958FC</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF18B8B1-832F-81C9-3037-E8467B4BD9BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3DF3F42-8208-1CDE-E8C7-A6F1A1BC622F" name="COACHESSPECS_COACHES_FK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>A9A1FC1E-6CBC-0BAC-052A-2A5E64C9C992</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F059FC00-0346-A0D4-F344-A037A537D3C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D209F50D-3E11-FD58-CF41-1F97A25F8B0A" name="COACHESSPECS_SERVICES_FK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>EB94DB6C-26D6-D5B5-478E-1F69A59315FD</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A70D9AF7-AD5B-6305-8B2D-3F7635D4D054"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

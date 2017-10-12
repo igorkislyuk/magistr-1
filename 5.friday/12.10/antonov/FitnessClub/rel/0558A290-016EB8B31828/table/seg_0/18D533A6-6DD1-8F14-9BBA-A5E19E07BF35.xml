@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="18D533A6-6DD1-8F14-9BBA-A5E19E07BF35" name="SERVICES">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>4E8902D4-0322-0769-6786-236C1ECCC3DB</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<abbreviation>SERVICES</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="42C04F1F-C440-1F72-0CB8-1F30549B20E9">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>1BF1D0DF-3E9B-3CD0-894C-08DB30864EED</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE" id="58E35801-6CDC-9763-A67A-247F5FF47D51">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>4BC0AC91-F780-8421-02D2-59D39DE57DAD</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPTION" id="09FC97E5-97FF-561D-72A1-BBC95F288333">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>28B164AB-9B11-4FCE-E6C0-B05CB1C07631</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07D0D404-0E77-230A-62EA-9059FF6DE53F" name="SERVICES_PK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-29 15:36:26 UTC</createdTime>
+<generatorID>4A0FE00B-CCD1-3C0A-84BB-7018EDC9E0FA</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42C04F1F-C440-1F72-0CB8-1F30549B20E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

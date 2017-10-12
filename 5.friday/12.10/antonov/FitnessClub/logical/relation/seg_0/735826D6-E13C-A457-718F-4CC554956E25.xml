@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CoachesToTrainingsRelation" directorySegmentName="seg_0" id="735826D6-E13C-A457-718F-4CC554956E25">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-16 13:41:24 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<sourcePk>F24881E1-E326-F2E6-9B22-02B51456D8B4</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BEF5AAD7-FCC8-69BA-2CE3-109745511F14</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5BD552A3-A269-D7B7-15D8-CAC862DB28F7</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

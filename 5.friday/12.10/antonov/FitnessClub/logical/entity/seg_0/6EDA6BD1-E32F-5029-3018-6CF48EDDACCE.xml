@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6EDA6BD1-E32F-5029-3018-6CF48EDDACCE" name="Payments">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-08 16:43:15 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>PAYMENTS</preferredAbbreviation>
+<shortName>PAYMENTS</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="B292204C-9BCE-DC2A-5760-9DAABCE643FA">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-08 16:43:27 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATE" id="9AB3A9ED-5870-4982-0ED5-0F651BDBE47F">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-08 16:46:18 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PAYMENT_METHOD" id="B6CFD71F-ED62-4EF6-BF3B-91264F859DA3">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-15 17:18:17 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PAYMENT_STATUS" id="8DAFC688-C2BA-D809-B28F-7B2BF04F30A1">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-15 17:18:26 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TRAINING_ID" id="15494606-86DD-F78D-6E50-D5216A05D1A5">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-16 14:08:14 UTC</createdTime>
+<generatorID>061CAD58-2D7B-1184-3FF8-8C30D9116B23</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<referedAttribute>DE759754-FFAF-58F9-B0E9-BB71C7641E40</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MANAGER_ID" id="FB0CC25B-D274-3D0E-3B5E-85223212105C">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-16 14:08:46 UTC</createdTime>
+<generatorID>FBB7EB01-1268-1614-8AA5-4138F66EBA60</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<referedAttribute>E02ED0C5-2E23-CEB2-7125-77A8E2C9AE1B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name=" " id="643DA48F-DD6B-E36F-FE29-8944296D3A76">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-16 14:08:14 UTC</createdTime>
+<generatorID>061CAD58-2D7B-1184-3FF8-8C30D9116B23</generatorID>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<referedAttribute>C614D65E-EDC9-CEFF-2A74-B7FD8EBF2C6E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D39E0AD7-68BD-5B07-F34A-7B67CBEDE4A6" name="Payments PK">
+<createdBy>AntoE</createdBy>
+<createdTime>2017-09-08 16:43:36 UTC</createdTime>
+<ownerDesignName>FitnessClub</ownerDesignName>
+<engineerTo>
+<item key="0558A290-C205-DAAE-B1EF-016EB8B31828" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B292204C-9BCE-DC2A-5760-9DAABCE643FA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
