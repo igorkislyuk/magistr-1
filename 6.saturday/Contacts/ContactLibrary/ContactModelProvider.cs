@@ -44,6 +44,7 @@ namespace ContactLibrary
         public void UpdateContact(int id, ContactModel model)
         {
             var contactModel = ContactModel(id);
+
             if (contactModel != null)
             {
                 contactModel.Name = model.Name;
@@ -56,10 +57,12 @@ namespace ContactLibrary
 
         public int AddContact(string name, string address, string phone)
         {
-            var model = new ContactModel(contactsList.Count);
-            model.Name = name;
-            model.Address = address;
-            model.Phone = phone;
+            var model = new ContactModel(contactsList.Count)
+            {
+                Name = name,
+                Address = address,
+                Phone = phone
+            };
 
             contactsList.Add(model);
 
@@ -84,16 +87,14 @@ namespace ContactLibrary
 
         private List<ContactModel> CreateCustomerXmlStub()
         {
-            var model = new ContactModel(0);
-            model.Name = "Joe";
-            model.Address = "Nowhere, TX 1023";
-            model.Phone = "123-456";
+            var model = new ContactModel(0)
+            {
+                Name = "Joe",
+                Address = "Nowhere, TX 1023",
+                Phone = "123-456"
+            };
 
-            var contactsList = new List<ContactModel>();
-
-            contactsList.Add(model);
-
-            return contactsList;
+            return new List<ContactModel> { model };
         }
 
         private void SaveContactList()

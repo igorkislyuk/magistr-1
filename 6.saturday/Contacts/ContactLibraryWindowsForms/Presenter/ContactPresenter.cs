@@ -9,79 +9,79 @@ namespace ContactLibraryWindowsForms
 {
     public class ContactPresenter
     {
-        private readonly IContactView view;
-        private readonly IContactProvider repository;
+        private readonly IContactView _view;
+        private readonly IContactProvider _repository;
 
         public ContactPresenter(IContactView view, IContactProvider repository)
         {
-            this.view = view;
+            this._view = view;
             view.Presenter = this;
 
-            this.repository = repository;
+            this._repository = repository;
 
             UpdateContactList();
         }
 
         private void UpdateContactList()
         {
-            var contactNames = from contact in repository.GetAllContactModels() select contact.Name;
+            var contactNames = _repository.GetAllContactModels().Select(contact => contact.Name);
 
             // zero or selected from view
-            int selectedCustomer = 0;
+            var selectedCustomer = 0;
 
-            if (view.SelectedContact >= 0 && view.SelectedContact < repository.GetAllContactModels().Count())
+            if (_view.SelectedContact >= 0 && _view.SelectedContact < _repository.GetAllContactModels().Count())
             {
-                selectedCustomer = view.SelectedContact;
-            } 
+                selectedCustomer = _view.SelectedContact;
+            }
             else
             {
                 selectedCustomer = 0;
             }
 
             // update view
-            view.ContactList = contactNames.ToList();
-            view.SelectedContact = selectedCustomer;
+            _view.ContactList = contactNames.ToList();
+            _view.SelectedContact = selectedCustomer;
         }
 
         public void UpdateContactView(int p)
         {
-            var contact = repository.ContactModel(p);
+            var contact = _repository.ContactModel(p);
 
             if (contact != null)
             {
                 // update view
-                view.ContactName = contact.Name;
-                view.Address = contact.Address;
-                view.Phone = contact.Phone;
+                _view.ContactName = contact.Name;
+                _view.Address = contact.Address;
+                _view.Phone = contact.Phone;
             }
         }
 
         public void UpdateCustomer()
         {
-            var currentSelectedContact = repository.ContactModel(view.SelectedContact);
+            var currentSelectedContact = _repository.ContactModel(_view.SelectedContact);
 
             if (currentSelectedContact != null)
             {
-                currentSelectedContact.Name = view.ContactName;
-                currentSelectedContact.Address = view.Address;
-                currentSelectedContact.Phone = view.Phone;
+                currentSelectedContact.Name = _view.ContactName;
+                currentSelectedContact.Address = _view.Address;
+                currentSelectedContact.Phone = _view.Phone;
 
-                repository.UpdateContact(currentSelectedContact.ID, currentSelectedContact);
+                _repository.UpdateContact(currentSelectedContact.ID, currentSelectedContact);
             }
-            
+
             UpdateContactList();
         }
 
         public void AddCustomer()
         {
-            repository.AddContact(view.ContactName, view.Address, view.Phone);
+            _repository.AddContact(_view.ContactName, _view.Address, _view.Phone);
 
             UpdateContactList();
         }
 
         internal void RemoveSelected()
         {
-            repository.RemoveModel(view.SelectedContact);
+            _repository.RemoveModel(_view.SelectedContact);
 
             UpdateContactList();
         }
