@@ -15,5 +15,7 @@ namespace ContactLibrary
         void UpdateContact(int id, ContactModel updatedModel);
 
         int AddContact(string name, string address, string phone);
+
+        void RemoveModel(int id);
     }
 }

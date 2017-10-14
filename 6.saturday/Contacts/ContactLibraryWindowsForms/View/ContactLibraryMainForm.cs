@@ -90,6 +90,10 @@ namespace ContactLibraryWindowsForms
         {
             Presenter.UpdateContactView(contactListBox.SelectedIndex);
         }
-        
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            Presenter.RemoveSelected();
+        }
     }
 }

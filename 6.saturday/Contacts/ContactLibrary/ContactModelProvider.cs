@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace ContactLibrary
 {
-    sealed public class ContactModelProvider: IContactProvider
+    sealed public class ContactModelProvider : IContactProvider
     {
         private readonly string xmlFilePath;
         private readonly XmlSerializer serializer = new XmlSerializer(typeof(List<ContactModel>));
@@ -68,6 +68,18 @@ namespace ContactLibrary
             return model.ID;
         }
 
+        public void RemoveModel(int id)
+        {
+            var model = contactsList.Find(arg => arg.ID == id);
+
+            if (model != null)
+            {
+                contactsList.Remove(model);
+
+                SaveContactList();
+            }
+        }
+
         #endregion
 
         private List<ContactModel> CreateCustomerXmlStub()
@@ -91,6 +103,8 @@ namespace ContactLibrary
                 serializer.Serialize(writer, contactsList);
             }
         }
+
+        
 
     }
 }

@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.contactListBox = new System.Windows.Forms.ListBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.RemoveButton = new System.Windows.Forms.Button();
             groupBox1 = new System.Windows.Forms.GroupBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -49,6 +50,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(this.RemoveButton);
             groupBox1.Controls.Add(this.nameTextBox);
             groupBox1.Controls.Add(this.label3);
             groupBox1.Controls.Add(this.addressTextBox);
@@ -195,6 +197,17 @@
             this.splitContainer1.SplitterDistance = 665;
             this.splitContainer1.TabIndex = 4;
             // 
+            // RemoveButton
+            // 
+            this.RemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.RemoveButton.Location = new System.Drawing.Point(138, 677);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(122, 36);
+            this.RemoveButton.TabIndex = 8;
+            this.RemoveButton.Text = "Remove";
+            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
+            // 
             // ContactLibraryMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -225,6 +238,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button RemoveButton;
     }
 }
 

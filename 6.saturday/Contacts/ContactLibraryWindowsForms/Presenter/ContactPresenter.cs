@@ -25,9 +25,18 @@ namespace ContactLibraryWindowsForms
         private void UpdateContactList()
         {
             var contactNames = from contact in repository.GetAllContactModels() select contact.Name;
-            
+
             // zero or selected from view
-            int selectedCustomer = view.SelectedContact >= 0 ? view.SelectedContact : 0;
+            int selectedCustomer = 0;
+
+            if (view.SelectedContact >= 0 && view.SelectedContact < repository.GetAllContactModels().Count())
+            {
+                selectedCustomer = view.SelectedContact;
+            } 
+            else
+            {
+                selectedCustomer = 0;
+            }
 
             // update view
             view.ContactList = contactNames.ToList();
@@ -70,6 +79,11 @@ namespace ContactLibraryWindowsForms
             UpdateContactList();
         }
 
-        //public void Remove
+        internal void RemoveSelected()
+        {
+            repository.RemoveModel(view.SelectedContact);
+
+            UpdateContactList();
+        }
     }
 }
