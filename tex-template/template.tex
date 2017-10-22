@@ -1,0 +1,29 @@
+\documentclass[14pt,a4paper,report]{report}
+
+% times new font
+\usepackage{mathptmx}
+
+% mock data
+\usepackage{lipsum}
+
+%russian
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage[
+    letterpaper,
+    left        = 2.5cm,
+    right       = 1cm,
+    top         = 1cm,
+    headheight  = 2cm
+]{geometry}
+
+\begin{document}
+
+\chapter{A chapter}
+\lipsum[1]
+\section{A section}
+\lipsum[2]
+Привет
+\end{document}
