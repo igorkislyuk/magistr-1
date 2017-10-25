@@ -1,15 +1,17 @@
-\documentclass[14pt,a4paper,report]{report}
+\documentclass[14pt,a4paper,report]{extreport}
 
-% times new font
+% times new roman font
 \usepackage{mathptmx}
 
 % mock data
 \usepackage{lipsum}
 
 %russian
-\usepackage[T1]{fontenc}
+\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
+
+\linespread{1.5}
 
 \usepackage[
     letterpaper,
@@ -21,9 +23,58 @@
 
 \begin{document}
 
+	\begin{titlepage}
+	\begin{center}
+		\fontsize{12pt}{10pt}\selectfont		
+		Санкт-Петербургский государственный университет \\
+		\vspace*{.6\baselineskip}
+		\fontsize{12pt}{10pt}\selectfont
+	\textbf{	Кафедра моделирования электромеханических и компьютерных систем }
+		
+		\vspace*{6\baselineskip}
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+	\textbf{Шалыгина Анастасия Михайловна}
+	
+		\vspace*{2\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		\textbf{Выпускная квалификационная работа бакалавра}	
+		
+		\vspace*{3\baselineskip}
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+\textbf{Расчет характеристик газовой смеси, транспортируемой по морским газопроводам, с учетом нестационарности теплообмена с внешней средой и рельефа трассы }\\
+		\vspace*{1.15\baselineskip}
+		\fontseries{m}\fontsize{15pt}{18pt}\selectfont
+		Направление 010900\\
+		«Прикладные математика и физика»\\
+	\end{center}
+\vspace*{2\baselineskip}
+\begin{flushright}
+	\fontseries{m}\fontsize{13pt}{10pt}\selectfont
+	Научный руководитель,\\
+	кандидат физ.-мат. наук,\\
+	доцент\\
+	Ермолаева Н.Н.\\
+\end{flushright}
+\vspace*{3\baselineskip}
+\begin{center}
+	Санкт-Петербург\\
+	2017
+\end{center}
+\end{titlepage}
+
+\begin{center}
+МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, МЕХАНИКИ И ОПТИКИ
+ФАКУЛЬТЕТ ИНФОКОММУНИКАЦИОННЫХ ТЕХНОЛОГИЙ
+
+КАФЕДРА ПРОГРАММНЫХ СИСТЕМ
+\end{center}
+
+\pagebreak
+
 \chapter{A chapter}
 \lipsum[1]
 \section{A section}
 \lipsum[2]
 Привет
 \end{document}
+
