@@ -1,0 +1,104 @@
+\documentclass[14pt,a4paper]{extreport}
+
+% times new roman font
+\usepackage{mathptmx}
+
+% mock data
+\usepackage{lipsum}
+
+%russian
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\linespread{1.5}
+
+\usepackage{graphicx}
+
+\usepackage[
+    letterpaper,
+    left        = 2cm,
+    right       = 1cm,
+    top         = 1cm,
+    headheight  = 2cm
+]{geometry}
+
+\begin{document}
+
+	\begin{titlepage}
+	\begin{center}	
+		\fontsize{14pt}{14pt}\selectfont
+		МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ\\
+
+		\vspace*{0.6\baselineskip}
+		
+		\textbf{САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, МЕХАНИКИ И ОПТИКИ}
+		
+		\vspace*{0.6\baselineskip}
+		ФАКУЛЬТЕТ ИНФОКОММУНИКАЦИОННЫХ ТЕХНОЛОГИЙ
+		КАФЕДРА ПРОГРАММНЫХ СИСТЕМ
+	
+		\vspace*{7\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		\textbf{Отчет по лабораторной работе}	
+		
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+		\textbf{Моя Записная Книжка}\\
+		\vspace*{1.15\baselineskip}
+		\end{center}
+	
+	\vspace*{2\baselineskip}
+	\begin{flushright}
+	\fontseries{m}\fontsize{14pt}{14pt}\selectfont
+	Выполнил Кислюк~И.~В.\\
+	студент группы К4120\\
+	Проверил: Осипов Н. А.\\
+	\end{flushright}
+	
+	\vspace*{3\baselineskip}
+	\begin{center}
+	Санкт-Петербург\\
+	2017
+	\end{center}
+	
+\end{titlepage}
+
+\fontsize{16pt}{16pt}\selectfont
+\begin{center}
+ЦЕЛЬ РАБОТЫ:
+\end{center}
+
+По теме «Разработка графических приложений» разработать приложение Windows Forms "Моя записная книжка" по шаблону MVP, которое должно учитывать информацию о людях и сохранять данные в коллекцию.
+\clearpage
+
+\fontsize{16pt}{16pt}\selectfont
+\begin{center}
+\bfseries{ХОД РАБОТЫ:}
+\end{center}
+
+\fontsize{14pt}{14pt}\selectfont
+
+\begin{enumerate}
+
+\item Необходимо спроектировать интерфейс взаимодействия с моделью. Была создана сущность под названием ContactModelProvider, которая позволяла проводить CRUD операции над моделями контактов. Все операции определены в соответсвующем протоколе IContactProvider. Таким образом была реализована модель из шаблона MVP
+\begin{figure}[h]
+\includegraphics[scale=0.5]{../screenshots/Screenshot_1}
+\caption{Пример интерфейса IContactProvider}
+\end{figure}
+
+\item Необходимо реализовать сущность Presenter, которая отвечает за взаимодействие модели и представления, повышая таким образом их изолированность и способность работать независимо.
+\end{enumerate}
+
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{../screenshots/Screenshot_2}
+\caption{Пример реализации сущности Presenter}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{../screenshots/Screenshot_3}
+\caption{Пример использования приложения}
+\end{figure}
+
+\end{document}
+
