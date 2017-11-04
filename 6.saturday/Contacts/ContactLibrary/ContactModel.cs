@@ -10,13 +10,14 @@ namespace ContactLibrary
 
     public sealed class ContactModel
     {
-        public Int64 Id { get; }
+        // TODO: make set private and deal with serialization
+        public Int64 Id { get; set; }
     
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public string Address { get; }
+        public string Address { get; set;  }
 
-        public string Phone { get; }
+        public string Phone { get; set;  }
 
         internal ContactModel(Int64 id, string name, string address, string phone)
         {

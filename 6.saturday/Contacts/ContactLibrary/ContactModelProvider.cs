@@ -18,8 +18,6 @@ namespace ContactLibrary
         {
             _xmlFilePath = path + @"\contacts-storage.xml";
 
-            _serializer = new XmlSerializer(typeof(ContactModel));
-
             if (!File.Exists(_xmlFilePath))
             {
                 _contactModelsList = CreateCustomerXmlStub();
@@ -83,7 +81,7 @@ namespace ContactLibrary
             }
         }
 
-        public void PersistenceSave()
+        public void ReloadFromPersistence()
         {
             // if file presented
             using (var reader = new StreamReader(_xmlFilePath))
@@ -92,7 +90,7 @@ namespace ContactLibrary
             }
         }
 
-        public void ReloadFromPersistence()
+        public void PersistenceSave()
         {
             using (var writer = new StreamWriter(_xmlFilePath, false))
             {

@@ -32,7 +32,7 @@ namespace ContactLibraryWindowsForms
                     return;
                 }
 
-                if (selectedContact < value.Count)
+                if (selectedContact < value.Count && selectedContact > 0)
                 {
                     _view.SelectedContact = selectedContact;
                 }
