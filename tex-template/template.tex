@@ -13,6 +13,8 @@
 
 \linespread{1.5}
 
+\usepackage{graphicx}
+
 \usepackage[
     letterpaper,
     left        = 2cm,
@@ -21,6 +23,7 @@
     headheight  = 2cm
 ]{geometry}
 
+%\renewcommand{\caption}{Рисунок}
 
 \begin{document}
 
@@ -37,7 +40,7 @@
 		ФАКУЛЬТЕТ ИНФОКОММУНИКАЦИОННЫХ ТЕХНОЛОГИЙ
 		КАФЕДРА ПРОГРАММНЫХ СИСТЕМ
 	
-		\vspace*{8\baselineskip}
+		\vspace*{7\baselineskip}
 		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
 		\textbf{Название типа отчета}	
 		
@@ -54,18 +57,23 @@
 	Проверил: Преподаватель\\
 	\end{flushright}
 	
-	\vspace*{3\baselineskip}
+	\vspace*{4\baselineskip}
 	\begin{center}
 	Санкт-Петербург\\
 	2017
 	\end{center}
 	
-	\end{titlepage}
+\end{titlepage}
 
 \chapter{A chapter}
 \lipsum[1]
 \section{A section}
 \lipsum[2]
-Привет
+
+\begin{figure}[b]
+\includegraphics[scale=0.5]{image}
+\caption{Рисунок}
+\end{figure}
+
 \end{document}
 
