@@ -36,7 +36,7 @@ namespace ContactLibraryWindowsForms
         public int SelectedContact
         {
             get { return this.contactListBox.SelectedIndex; }
-            set => contactListBox.SelectedIndex = value;
+            set { contactListBox.SelectedIndex = value; }
         }
 
         public string Address
@@ -94,6 +94,11 @@ namespace ContactLibraryWindowsForms
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             Presenter.RemoveSelected();
+        }
+
+        private void ContactLibraryMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Presenter.Save();
         }
     }
 }

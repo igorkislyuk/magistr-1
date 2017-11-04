@@ -23,6 +23,7 @@ namespace ContactLibrary
             if (!File.Exists(_xmlFilePath))
             {
                 _contactModelsList = CreateCustomerXmlStub();
+                PersistenceSave();
             }
             else
             {
@@ -36,7 +37,7 @@ namespace ContactLibrary
 
         public IEnumerable<ContactModel> GetAllContactModels()
         {
-            return _contactModelsList;
+            return _contactModelsList.OrderBy(model => model.Id).ToList();
         }
 
         public ContactModel GetContactModel(long id)
@@ -57,7 +58,16 @@ namespace ContactLibrary
 
         public ContactModel AddContactModel(string name, string address, string phone)
         {
-            var maxId = _contactModelsList.Max(model => model.Id) + 1;
+            long maxId;
+            if (_contactModelsList.Count == 0)
+            {
+                maxId = 0;
+            }
+            else
+            {
+                maxId = _contactModelsList.Max(model => model.Id) + 1;
+            }
+
             var contactModel = new ContactModel(maxId, name, address, phone);
             _contactModelsList.Add(contactModel);
 
@@ -66,7 +76,7 @@ namespace ContactLibrary
 
         public void RemoveContactModel(long id)
         {
-            var contactModel = _contactModelsList.First(model => model.Id == id);
+            var contactModel = _contactModelsList.Find(model => model.Id == id);
             if (contactModel != null)
             {
                 _contactModelsList.Remove(contactModel);

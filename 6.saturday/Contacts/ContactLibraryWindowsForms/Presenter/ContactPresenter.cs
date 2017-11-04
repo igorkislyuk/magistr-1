@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,10 +16,30 @@ namespace ContactLibraryWindowsForms
         private IList<ContactModel> _contactModels;
         private IList<ContactModel> ContactModels
         {
+            get => _contactModels;
             set
             {
                 _contactModels = value;
+
+                // save and reupdate selected index
+                var selectedContact = _view.SelectedContact;
+
                 _view.ContactList = value.Select(model => model.Name).ToList();
+
+                // does not provide selection for zero items
+                if (value.Count == 0)
+                {
+                    return;
+                }
+
+                if (selectedContact < value.Count)
+                {
+                    _view.SelectedContact = selectedContact;
+                }
+                else
+                {
+                    _view.SelectedContact = 0;
+                }
             }
         }
 
@@ -55,16 +76,29 @@ namespace ContactLibraryWindowsForms
                 selectedContact = 0;
             }
 
-            // update view
-            _view.SelectedContact = selectedContact;
+            // update view for non zero selection
+            if (models.Length != 0)
+            {
+                _view.SelectedContact = selectedContact;
+            }
         }
 
         public void UpdateContactView(int p)
         {
-            var contactModel = _repository.GetContactModel(p + 1);
+            var id = GetIdFromSelectedIndex(p);
 
-            if (contactModel == null) return;
-            
+            if (id == null)
+            {
+                return;
+            }
+
+            var contactModel = _repository.GetContactModel(id.Value);
+
+            if (contactModel == null)
+            {
+                return;
+            }
+
             // update view
             _view.ContactName = contactModel.Name;
             _view.Address = contactModel.Address;
@@ -73,12 +107,21 @@ namespace ContactLibraryWindowsForms
 
         public void UpdateContactModel()
         {
-            var currentSelectedContact = _repository.GetContactModel(_view.SelectedContact);
+            var id = GetIdFromSelectedIndex(_view.SelectedContact);
 
-            if (currentSelectedContact != null)
+            if (id == null)
             {
-                _repository.UpdateContactModel(currentSelectedContact.Id, _view.ContactName, _view.Address, _view.Phone);
+                return;
             }
+
+            var contactModel = _repository.GetContactModel(id.Value);
+
+            if (contactModel == null)
+            {
+                return;
+            }
+
+            _repository.UpdateContactModel(contactModel.Id, _view.ContactName, _view.Address, _view.Phone);
 
             UpdateContactList(false);
         }
@@ -92,9 +135,37 @@ namespace ContactLibraryWindowsForms
 
         internal void RemoveSelected()
         {
-            _repository.RemoveContactModel(_view.SelectedContact + 1);
+            var id = GetIdFromSelectedIndex(_view.SelectedContact);
 
+            if (id == null) return;
+
+            var contactModel = _repository.GetContactModel(id.Value);
+
+            if (contactModel == null)
+            {
+                return;
+            }
+
+            _repository.RemoveContactModel(contactModel.Id);
             UpdateContactList(false);
         }
+
+        private long? GetIdFromSelectedIndex(int index)
+        {
+            if (index < 0 || index >= ContactModels.Count)
+            {
+                return null;
+            }
+
+            var localContactModel = ContactModels[index];
+
+            return localContactModel == null ? null : _repository.GetContactModel(localContactModel.Id)?.Id;
+        }
+
+        public void Save()
+        {
+            _repository.PersistenceSave();
+        }
+
     }
 }
