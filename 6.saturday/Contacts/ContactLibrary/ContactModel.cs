@@ -11,7 +11,7 @@ namespace ContactLibrary
     public sealed class ContactModel
     {
         // TODO: make set private and deal with serialization
-        public Int64 Id { get; set; }
+        public Int64 Id { get; internal set; }
     
         public string Name { get; set; }
 
