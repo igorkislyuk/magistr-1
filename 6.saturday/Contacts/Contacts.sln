@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactLibraryWindowsForms"
 		{D09F9AB4-B2F4-40EC-BD84-94B8C804147B} = {D09F9AB4-B2F4-40EC-BD84-94B8C804147B}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{6510DE5C-F0C3-4E3A-971F-D8793FC603B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{DAD902A0-EBF9-4C87-BA6C-086B6C34BBD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAD902A0-EBF9-4C87-BA6C-086B6C34BBD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAD902A0-EBF9-4C87-BA6C-086B6C34BBD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6510DE5C-F0C3-4E3A-971F-D8793FC603B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6510DE5C-F0C3-4E3A-971F-D8793FC603B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6510DE5C-F0C3-4E3A-971F-D8793FC603B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6510DE5C-F0C3-4E3A-971F-D8793FC603B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,16 @@ namespace ContactLibraryWindowsForms
         private readonly IContactView _view;
         private readonly IContactProvider _repository;
 
+        private IList<ContactModel> _contactModels;
+        private IList<ContactModel> ContactModels
+        {
+            set
+            {
+                _contactModels = value;
+                _view.ContactList = value.Select(model => model.Name).ToList();
+            }
+        }
+
         public ContactPresenter(IContactView view, IContactProvider repository)
         {
             this._view = view;
@@ -19,71 +29,72 @@ namespace ContactLibraryWindowsForms
 
             this._repository = repository;
 
-            UpdateContactList();
+            UpdateContactList(false);
         }
 
-        private void UpdateContactList()
+        private void UpdateContactList(bool incrementSelection)
         {
-            var contactNames = _repository.GetAllContactModels().Select(contact => contact.Name);
+            var models = _repository.GetAllContactModels().ToArray();
+            ContactModels = models;
 
             // zero or selected from view
-            var selectedCustomer = 0;
+            int selectedContact;
 
-            if (_view.SelectedContact >= 0 && _view.SelectedContact < _repository.GetAllContactModels().Count())
+            if (_view.SelectedContact >= 0 && _view.SelectedContact < models.Length)
             {
-                selectedCustomer = _view.SelectedContact;
+                selectedContact = _view.SelectedContact;
+
+                // proceed to next selection
+                if (incrementSelection && selectedContact + 1 < models.Length)
+                {
+                    selectedContact += 1;
+                }
             }
             else
             {
-                selectedCustomer = 0;
+                selectedContact = 0;
             }
 
             // update view
-            _view.ContactList = contactNames.ToList();
-            _view.SelectedContact = selectedCustomer;
+            _view.SelectedContact = selectedContact;
         }
 
         public void UpdateContactView(int p)
         {
-            var contact = _repository.ContactModel(p);
+            var contactModel = _repository.GetContactModel(p + 1);
 
-            if (contact != null)
-            {
-                // update view
-                _view.ContactName = contact.Name;
-                _view.Address = contact.Address;
-                _view.Phone = contact.Phone;
-            }
+            if (contactModel == null) return;
+            
+            // update view
+            _view.ContactName = contactModel.Name;
+            _view.Address = contactModel.Address;
+            _view.Phone = contactModel.Phone;
         }
 
-        public void UpdateCustomer()
+        public void UpdateContactModel()
         {
-            var currentSelectedContact = _repository.ContactModel(_view.SelectedContact);
+            var currentSelectedContact = _repository.GetContactModel(_view.SelectedContact);
 
             if (currentSelectedContact != null)
             {
-                currentSelectedContact.Name = _view.ContactName;
-                currentSelectedContact.Address = _view.Address;
-                currentSelectedContact.Phone = _view.Phone;
-
-                _repository.UpdateContact(currentSelectedContact.ID, currentSelectedContact);
+                _repository.UpdateContactModel(currentSelectedContact.Id, _view.ContactName, _view.Address, _view.Phone);
             }
 
-            UpdateContactList();
+            UpdateContactList(false);
         }
 
         public void AddCustomer()
         {
-            _repository.AddContact(_view.ContactName, _view.Address, _view.Phone);
+            _repository.AddContactModel("No name", "No address", "No phone");
 
-            UpdateContactList();
+            UpdateContactList(true);
         }
 
         internal void RemoveSelected()
         {
-            _repository.RemoveModel(_view.SelectedContact);
+            _repository.RemoveContactModel(_view.SelectedContact + 1);
 
-            UpdateContactList();
+            UpdateContactList(false);
         }
     }
 }

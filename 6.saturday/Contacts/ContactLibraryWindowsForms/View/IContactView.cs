@@ -8,6 +8,8 @@ namespace ContactLibraryWindowsForms
 {
     public interface IContactView
     {
+        ContactPresenter Presenter { set; }
+
         IList<string> ContactList { get; set; }
 
         int SelectedContact { get; set; }
@@ -17,8 +19,6 @@ namespace ContactLibraryWindowsForms
         string Address { get; set; }
 
         string Phone { get; set; }
-
-        ContactPresenter Presenter { set; }
-
+        
     }
 }

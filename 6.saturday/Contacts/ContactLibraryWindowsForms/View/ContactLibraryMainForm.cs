@@ -36,7 +36,7 @@ namespace ContactLibraryWindowsForms
         public int SelectedContact
         {
             get { return this.contactListBox.SelectedIndex; }
-            set { this.contactListBox.SelectedIndex = value; }
+            set => contactListBox.SelectedIndex = value;
         }
 
         public string Address
@@ -82,7 +82,7 @@ namespace ContactLibraryWindowsForms
 
             if (!_isEditMode)
             {
-                Presenter.UpdateCustomer();
+                Presenter.UpdateContactModel();
             }
         }
 

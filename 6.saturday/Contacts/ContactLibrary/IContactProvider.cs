@@ -8,28 +8,19 @@ namespace ContactLibrary
 {
     public interface IContactProvider
     {
-        /// <summary>
-        /// All current presented models
-        /// </summary>
-        /// <returns></returns>
+    
         IEnumerable<ContactModel> GetAllContactModels();
 
-        /// <summary>
-        /// Retrieve contact model from repository
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        ContactModel ContactModel(int id);
+        ContactModel GetContactModel(long id);
 
-        /// <summary>
-        /// Update element by id in repository
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="updatedModel"></param>
-        void UpdateContact(int id, ContactModel updatedModel);
+        void UpdateContactModel(long id, string newName, string newAddress, string newPhone);
 
-        int AddContact(string name, string address, string phone);
+        ContactModel AddContactModel(string name, string address, string phone);
 
-        void RemoveModel(int id);
+        void RemoveContactModel(long id);
+
+        void PersistenceSave();
+
+        void ReloadFromPersistence();
     }
 }

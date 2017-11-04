@@ -1,24 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ContactLibrary
 {
+
     public sealed class ContactModel
     {
-        public int ID { get; set; }
+        public Int64 Id { get; }
     
-        public string Name { get; set; }
+        public string Name { get; }
 
-        public string Address { get; set; }
+        public string Address { get; }
 
-        public string Phone { get; set; }
+        public string Phone { get; }
 
-        public ContactModel(int id)
+        internal ContactModel(Int64 id, string name, string address, string phone)
         {
-            ID = id;
+            Id = id;
+            Name = name;
+            Address = address;
+            Phone = phone;
         }
 
         private ContactModel() { }
@@ -30,19 +35,14 @@ namespace ContactLibrary
 
         public override int GetHashCode()
         {
-            return Name.GetHashCode()
-                ^ Address.GetHashCode()
-                ^ Phone.GetHashCode();
+            return Id.GetHashCode();
         }
 
         public bool Equals(ContactModel other)
         {
-            if (other == null)
-                return false;
-
-            return this.Name == other.Name
-                && this.Address == other.Address
-                && this.Phone == other.Phone;
+            return Id == other?.Id;
         }
+
     }
 }
+

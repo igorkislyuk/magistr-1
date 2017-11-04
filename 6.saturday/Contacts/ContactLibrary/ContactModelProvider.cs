@@ -1,85 +1,92 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace ContactLibrary
 {
-    sealed public class ContactModelProvider : IContactProvider
+    public sealed class ContactModelProvider : IContactProvider
     {
-        private readonly string xmlFilePath;
-        private readonly XmlSerializer serializer = new XmlSerializer(typeof(List<ContactModel>));
-        private readonly List<ContactModel> contactsList;
+        private readonly string _xmlFilePath;
+        private readonly XmlSerializer _serializer = new XmlSerializer(typeof(List<ContactModel>));
+        private List<ContactModel> _contactModelsList;
 
         #region Public
 
         public ContactModelProvider(string path)
         {
-            xmlFilePath = path + @"\contacts.xml";
+            _xmlFilePath = path + @"\contacts-storage.xml";
 
-            if (!File.Exists(xmlFilePath))
+            _serializer = new XmlSerializer(typeof(ContactModel));
+
+            if (!File.Exists(_xmlFilePath))
             {
-                contactsList = CreateCustomerXmlStub();
+                _contactModelsList = CreateCustomerXmlStub();
             }
             else
             {
                 // if file presented
-                using (var reader = new StreamReader(xmlFilePath))
+                using (var reader = new StreamReader(_xmlFilePath))
                 {
-                    contactsList = (List<ContactModel>)serializer.Deserialize(reader);
+                    _contactModelsList = (List<ContactModel>)_serializer.Deserialize(reader);
                 }
             }
         }
 
         public IEnumerable<ContactModel> GetAllContactModels()
         {
-            return contactsList;
+            return _contactModelsList;
         }
 
-        public ContactModel ContactModel(int id)
+        public ContactModel GetContactModel(long id)
         {
-            return contactsList.Find(model => model.ID == id);
+            return _contactModelsList.Find(model => model.Id == id);
         }
 
-        public void UpdateContact(int id, ContactModel model)
+        public void UpdateContactModel(long id, string newName, string newAddress, string newPhone)
         {
-            var contactModel = ContactModel(id);
-
+            var contactModel = _contactModelsList.First(model => model.Id == id);
             if (contactModel != null)
             {
-                contactModel.Name = model.Name;
-                contactModel.Address = model.Address;
-                contactModel.Phone = model.Phone;
-
-                SaveContactList();
+                _contactModelsList.Remove(contactModel);
+                ContactModel newModel = new ContactModel(id, newName, newAddress, newPhone);
+                _contactModelsList.Add(newModel);
             }
         }
 
-        public int AddContact(string name, string address, string phone)
+        public ContactModel AddContactModel(string name, string address, string phone)
         {
-            var model = new ContactModel(contactsList.Count)
-            {
-                Name = name,
-                Address = address,
-                Phone = phone
-            };
+            var maxId = _contactModelsList.Max(model => model.Id) + 1;
+            var contactModel = new ContactModel(maxId, name, address, phone);
+            _contactModelsList.Add(contactModel);
 
-            contactsList.Add(model);
-
-            SaveContactList();
-
-            return model.ID;
+            return contactModel;
         }
 
-        public void RemoveModel(int id)
+        public void RemoveContactModel(long id)
         {
-            var model = contactsList.Find(arg => arg.ID == id);
-
-            if (model != null)
+            var contactModel = _contactModelsList.First(model => model.Id == id);
+            if (contactModel != null)
             {
-                contactsList.Remove(model);
+                _contactModelsList.Remove(contactModel);
+            }
+        }
 
-                SaveContactList();
+        public void PersistenceSave()
+        {
+            // if file presented
+            using (var reader = new StreamReader(_xmlFilePath))
+            {
+                _contactModelsList = (List<ContactModel>)_serializer.Deserialize(reader);
+            }
+        }
+
+        public void ReloadFromPersistence()
+        {
+            using (var writer = new StreamWriter(_xmlFilePath, false))
+            {
+                _serializer.Serialize(writer, _contactModelsList);
             }
         }
 
@@ -87,25 +94,9 @@ namespace ContactLibrary
 
         private List<ContactModel> CreateCustomerXmlStub()
         {
-            var model = new ContactModel(0)
-            {
-                Name = "Joe",
-                Address = "Nowhere, TX 1023",
-                Phone = "123-456"
-            };
-
-            return new List<ContactModel> { model };
+            var firstContactStub = new ContactModel(1, "Joe", "Nowhere, TX1023", "123-456");
+            return new List<ContactModel> { firstContactStub };
         }
-
-        private void SaveContactList()
-        {
-            using (var writer = new StreamWriter(xmlFilePath, false))
-            {
-                serializer.Serialize(writer, contactsList);
-            }
-        }
-
-        
 
     }
 }
