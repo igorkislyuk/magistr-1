@@ -1,0 +1,15 @@
+﻿<Window x:Class="WPF_Application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Application"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" TextBoxBase.TextChanged="Window_TextChanged">
+    <Grid TextBoxBase.TextChanged ="Grid_TextChanged">
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <RadioButton Content="TextBox event handling" HorizontalAlignment="Left" Margin="156,12,0,0" VerticalAlignment="Top" Name="RadioButton1"/>
+        <RadioButton Content="Grid event handling" HorizontalAlignment="Left" Margin="156,32,0,0" VerticalAlignment="Top" Name="RadioButton2"/>
+        <RadioButton Content="Window event handling" HorizontalAlignment="Left" Margin="156,52,0,0" VerticalAlignment="Top" Name="RadioButton3"/>
+    </Grid>
+</Window>
