@@ -1,5 +1,11 @@
 \documentclass[14pt,a4paper]{extreport}
 
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+\RequirePackage[labelsep=endash]{caption}
+
+% Рис 1. -> Рисунок 1
+\captionsetup[figure]{name=Рисунок}
+
 % Times New Roman, be sure to build with XeLaTeX
 \usepackage{fontspec}
 \usepackage[russian]{babel}
