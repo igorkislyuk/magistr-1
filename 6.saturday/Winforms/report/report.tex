@@ -1,10 +1,7 @@
 \documentclass[14pt,a4paper]{extreport}
 
-% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
-\RequirePackage[labelsep=endash]{caption}
-
-% Рис 1. -> Рисунок 1
-\captionsetup[figure]{name=Рисунок}
+% Caption configuration
+\usepackage{caption}
 
 % Times New Roman, be sure to build with XeLaTeX
 \usepackage{fontspec}
@@ -24,10 +21,6 @@
 \linespread{1.5}
 
 \usepackage{graphicx}
-
-%macros
-
-
 \usepackage[
     letterpaper,
     left        = 2cm,
@@ -35,6 +28,13 @@
     top         = 1cm,
     headheight  = 2cm
 ]{geometry}
+
+%configurations
+
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+% Рис 1. -> Рисунок 1
+\DeclareCaptionFormat{myformat}{\fontsize{12}{12}\selectfont#1#2#3}
+\captionsetup[figure]{format={myformat},name={Рисунок},labelsep=endash}
 
 \begin{document}
 
