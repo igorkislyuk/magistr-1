@@ -1,0 +1,5 @@
+INF_LOAD:Starting... 2_0
+INF_RTM:Detected NT6.DVP 6.2 
+._.:Base TRACE MODE 6 Profiler  ver. 6.06.0 
+ERR_LOAD:file not found C:/Users/Natasha/Desktop/??????/?????/?????_Scadaa/2/RTM_1/addr.ind
+ERR_LOAD:File ADDR.IND load error = -8
