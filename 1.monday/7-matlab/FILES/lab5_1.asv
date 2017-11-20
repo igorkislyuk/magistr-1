@@ -1,0 +1,18 @@
+c = input('c=');
+r = input('r=');
+l = input('L=');
+disp('Enter [a,b] and k:');
+a = input('a=');
+b = input('b=');
+k = input('k=');
+er = input('error=');
+w = 2*pi*a : 2*pi*k : 2*pi*b;
+g = r./(r.^2+(w*l-1./(w*c)).^2);
+pogr = (rand(1,length(g))-0.5)*2*er;
+new = g+g.*pogr;
+figure(1);
+plot(w,g,w,new);
+legend('theroretic calc', 'empiric calc');
+s = fopen('_file','wb');
+c = fwrite(s,a,'int');
+j
