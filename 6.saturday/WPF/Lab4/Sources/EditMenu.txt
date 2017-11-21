@@ -1,8 +1,0 @@
-<MenuItem Header="_Edit">
-                <MenuItem Command="ApplicationCommands.Cut" 
-                          CommandTarget="{Binding ElementName=search}" />
-                <MenuItem Command="ApplicationCommands.Copy" 
-                          CommandTarget="{Binding ElementName=search}" />
-                <MenuItem Command="ApplicationCommands.Paste" 
-                          CommandTarget="{Binding ElementName=search}" />
-            </MenuItem>

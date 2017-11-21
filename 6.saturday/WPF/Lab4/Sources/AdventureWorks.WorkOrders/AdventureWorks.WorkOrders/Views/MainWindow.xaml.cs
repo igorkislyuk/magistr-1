@@ -58,6 +58,28 @@ namespace AdventureWorks.WorkOrders.Views
                 sender.GetType().Name));
         }
 
+        private void ChangeSkinCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void ChangeSkinCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            ResourceDictionary dict =
+                Application.Current.Resources.MergedDictionaries[0];
+
+            if (e.Parameter.Equals("Shiny"))
+            {
+                dict.Source =
+                    new Uri("pack://application:,,,/AdventureWorks.Resources;component/Themes/ShinyBlue.xaml");
+            }
+            else
+            {
+                dict.Source =
+                    new Uri("pack://application:,,,/AdventureWorks.Resources;component/Themes/BureauBlue.xaml");
+            }
+        }
+
         #endregion
     }
 }

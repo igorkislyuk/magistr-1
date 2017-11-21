@@ -1,13 +1,20 @@
 ﻿<Window x:Class="AdventureWorks.WorkOrders.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cmd="clr-namespace:AdventureWorks.WorkOrders.Commands"
         Background="{DynamicResource WindowBackgroundBrush}"
         Cursor="{Binding MouseCursor}"
         Height="600"
         Width="800"
         Title="AdventureWorks Cycles Work Orders"
         KeyUp="control_KeyUp">
-    
+    <Window.CommandBindings>
+        <CommandBinding x:Name="changeSkin" 
+                        CanExecute="ChangeSkinCommand_CanExecute"
+                        Executed="ChangeSkinCommand_Executed"
+                        Command="cmd:UICommands.ChangeSkinCommand"/>
+    </Window.CommandBindings>
+
     <DockPanel KeyUp="control_KeyUp">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
@@ -22,7 +29,14 @@
                 <MenuItem Command="ApplicationCommands.Paste"
                           CommandTarget="{Binding ElementName=search}" />
             </MenuItem>
-            <!--TODO: Ex4. Task4. Add the Skin Menu Item-->
+
+            <MenuItem Header="_Skin">
+                <MenuItem Header="Bureau" Command="cmd:UICommands.ChangeSkinCommand"
+                          CommandParameter="Bureau"/>
+                <MenuItem Header="Shiny" Command="cmd:UICommands.ChangeSkinCommand"
+                          CommandParameter="Shiny"/>
+            </MenuItem>
+
             <MenuItem Header="_Help">
                 <MenuItem Click="about_Click"
                           Header="_About" />

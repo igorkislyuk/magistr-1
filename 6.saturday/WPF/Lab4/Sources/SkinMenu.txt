@@ -1,4 +1,0 @@
-<MenuItem Header="_Skin">
-                <MenuItem Header="Bureau" />
-                <MenuItem Header="Shiny" />
-</MenuItem>
