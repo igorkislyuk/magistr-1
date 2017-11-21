@@ -1,0 +1,40 @@
+﻿<Window x:Class="AdventureWorks.WorkOrders.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        Title="About"
+        WindowStartupLocation="CenterOwner">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top"
+                    Height="50"
+                    Margin="10" 
+                    Orientation="Horizontal">
+            <Image Margin="2" 
+                   Source="..\Resources\Images\Computer.png" />
+            <TextBlock FontSize="16"
+                       FontWeight="Bold" 
+                       Text="AdventureWorks Cycles">
+                <TextBlock.Effect>
+                    <DropShadowEffect />
+                </TextBlock.Effect>
+            </TextBlock>
+        </StackPanel>
+        <Button Click="ok_Click"
+                Content="OK"
+                DockPanel.Dock="Bottom"
+                Height="20"
+                HorizontalAlignment="Right"
+                IsDefault="True"
+                Margin="0,0,10,10"
+                Width="80" />
+        <StackPanel Height="75" 
+                    Margin="10,0,10,10">
+            <TextBlock Text="Work Order Application" />
+            <TextBlock Margin="0,10,0,0" 
+                       Text="Version 1.0" />
+            <TextBlock Margin="0,10,0,0" 
+                       Text="Copyright © 2010 AdventureWorks Cycles. All rights reserved." />
+        </StackPanel>
+    </DockPanel>
+</Window>
