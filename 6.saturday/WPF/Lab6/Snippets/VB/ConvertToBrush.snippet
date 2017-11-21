@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ConvertToBrush</Title>
+      <Author>Content Master</Author>
+      <Shortcut>ConvertToBrush</Shortcut>
+      <Description>Add the Convert method to the TextBrushConverter class</Description>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="VB">
+        <![CDATA[If Nothing Is values Then
+            
+                Return False
+            End If
+
+            Dim brush As New SolidColorBrush()
+        If (TypeOf values(0) Is DateTime) And
+            (TypeOf values(1) Is DateTime) Then
+            
+                Dim scheduledDate As DateTime = DirectCast(values(0), DateTime)
+                Dim actualDate As DateTime = DirectCast(values(1), DateTime)
+                brush.Color = If(actualDate > scheduledDate, Colors.Red, Colors.Black)
+                Return brush
+            
+            Else
+            
+                Dim plannedCost As decimal = DirectCast(values(0), decimal)
+                Dim actualCost As decimal = DirectCast(values(1), decimal)
+                brush.Color = If(actualCost > plannedCost, Colors.Red, Colors.Black)
+                Return brush
+                
+            End If
+]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

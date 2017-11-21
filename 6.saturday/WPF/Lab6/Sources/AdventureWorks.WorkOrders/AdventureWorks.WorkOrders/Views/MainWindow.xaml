@@ -1,0 +1,298 @@
+﻿<Window x:Class="AdventureWorks.WorkOrders.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cmd="clr-namespace:AdventureWorks.WorkOrders.Commands"
+        xmlns:conv="clr-namespace:AdventureWorks.WorkOrders.Converters"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Cursor="{Binding MouseCursor}"
+        Height="600"
+        Width="800"
+        Title="AdventureWorks Cycles Work Orders">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Command="{Binding CloseCommand}"
+                          Header="E_xit" />
+            </MenuItem>
+            <MenuItem AutomationProperties.AutomationId="EditMenu"
+                      Header="_Edit">
+                <MenuItem Command="ApplicationCommands.Cut"
+                          CommandTarget="{Binding ElementName=search}" />
+                <MenuItem Command="ApplicationCommands.Copy"
+                          CommandTarget="{Binding ElementName=search}" />
+                <MenuItem AutomationProperties.AutomationId="EditMenuPasteItem"
+                          Command="ApplicationCommands.Paste"
+                          CommandTarget="{Binding ElementName=search}" />
+            </MenuItem>
+            <MenuItem Header="_Skin">
+                <MenuItem Command="{Binding ChangeSkinCommand}"
+                          CommandParameter="Bureau" Header="Bureau" />
+                <MenuItem Command="{Binding ChangeSkinCommand}"
+                          CommandParameter="Shiny" Header="Shiny" />
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Command="{Binding AboutBoxCommand}"
+                          Header="_About" />
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Command="ApplicationCommands.Cut"
+                    CommandTarget="{Binding ElementName=search}"
+                    Height="32"
+                    Width="32">
+                <Image Margin="2" Source="..\Resources\Images\cut.png" />
+            </Button>
+            <Button Command="ApplicationCommands.Copy"
+                    CommandTarget="{Binding ElementName=search}"
+                    Height="32"
+                    Width="32">
+                <Image Margin="2" Source="..\Resources\Images\copy.png" />
+            </Button>
+            <Button Command="ApplicationCommands.Paste"
+                    CommandTarget="{Binding ElementName=search}"
+                    Height="32"
+                    Width="32">
+                <Image Margin="2" Source="..\Resources\Images\paste.png" />
+            </Button>
+        </ToolBar>
+        <Border DockPanel.Dock="Top"
+                BorderBrush="#FF535353"
+                BorderThickness="0,0,0,1"
+                Height="50"
+                Padding="10,0,10,0">
+            <TextBlock FontSize="24"
+                       Foreground="{DynamicResource TextBrush}"
+                       Margin="0,0,0,5"
+                       Text="AdventureWorks Cycles Work Orders"
+                       VerticalAlignment="Bottom" />
+        </Border>
+        <StatusBar Background="{DynamicResource WindowBackgroundBrush}"
+                   DockPanel.Dock="Bottom"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Bottom">
+            <StatusBarItem x:Name="Status"
+                           Content="Status"
+                           DockPanel.Dock="Left" />
+            <ProgressBar x:Name="progress"
+                         Height="20"
+                         IsIndeterminate="{Binding IsBusy}"
+                         Width="100" />
+        </StatusBar>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="0.3*" />
+            </Grid.RowDefinitions>
+            <GroupBox Header="Products">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Name:"
+                               Foreground="Black"
+                               Margin="0,0,5,0"
+                               Height="23"
+                               VerticalAlignment="Center" />
+                        <TextBox x:Name="search"
+                                 AutomationProperties.AutomationId="SearchTextBox"
+                                 Height="23"
+                                 KeyUp="search_KeyUp"
+                                 VerticalAlignment="Top"
+                                 Width="120" />
+                        <Label Content="Filter:"
+                               Foreground="Black"
+                               Height="23"
+                               Margin="10,0,5,0"
+                               VerticalAlignment="Center" />
+                        <ComboBox x:Name="filter"
+                                  Height="23"
+                                  SelectedIndex="0"
+                                  VerticalAlignment="Top"
+                                  Width="130">
+                            <ComboBoxItem>Name</ComboBoxItem>
+                            <ComboBoxItem>Maximum List Price</ComboBoxItem>
+                            <ComboBoxItem>Stock Level</ComboBoxItem>
+                        </ComboBox>
+                        <Button AutomationProperties.AutomationId="SearchProductsButton"
+                                Command="{Binding SearchProductsCommand}"
+                                Content="Search"
+                                Height="23"
+                                HorizontalAlignment="Left"
+                                IsEnabled="{Binding IsSearchButtonEnabled}"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Top"
+                                Width="75" />
+                        <Button Command="{Binding AllProductsCommand}"
+                                Content="All Products"
+                                Height="23"
+                                HorizontalAlignment="Left"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Top"
+                                Width="75" />
+                    </StackPanel>
+                    <DataGrid x:Name="products"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False"
+                              Grid.Row="1"
+                              HorizontalAlignment="Stretch"
+                              IsReadOnly="True"
+                              ItemsSource="{Binding Products}"
+                              SelectionMode="Single"
+                              VerticalAlignment="Top">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding ProductID}"
+                                                Header="Product ID" />
+                            <DataGridTextColumn Binding="{Binding Name}"
+                                                Header="Name" />
+                            <DataGridTextColumn Binding="{Binding ProductNumber}"
+                                                Header="Product Number" />
+                            <DataGridTextColumn Binding="{Binding Color}"
+                                                Header="Color" />
+                            <DataGridTextColumn Binding="{Binding SafetyStockLevel}"
+                                                Header="Safety Stock Level" />
+                            <DataGridTextColumn Binding="{Binding ReorderPoint}"
+                                                Header="Reorder Point" />
+                            <DataGridTextColumn Binding="{Binding StandardCost}"
+                                                Header="Standard Cost" />
+                            <DataGridTextColumn Binding="{Binding ListPrice}"
+                                                Header="List Price" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </GroupBox>
+            <GridSplitter Grid.Row="1"
+                          HorizontalAlignment="Stretch" />
+            <GroupBox Grid.Row="2"
+                      Header="Work Orders">
+                <Grid Margin="10,10,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.50*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="0.50*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <ListView x:Name="workOrders"
+                              HorizontalAlignment="Stretch"
+                              IsSynchronizedWithCurrentItem="True"
+                              VerticalAlignment="Stretch">
+                        <ListView.Resources>
+                            <Style TargetType="{x:Type ListViewItem}">
+                                <EventSetter Event="MouseDoubleClick" Handler="workOrders_MouseDoubleClick" />
+                            </Style>
+                        </ListView.Resources>
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Header="Order Quantity" />
+                                    <GridViewColumn Header="Stock Quantity" />
+                                    <GridViewColumn Header="Start Date" />
+                                    <GridViewColumn Header="End Date" />
+                                    <GridViewColumn Header="Due Date" />
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <GridSplitter Grid.Column="1"
+                                  HorizontalAlignment="Stretch"
+                                  Width="10"
+                                  VerticalAlignment="Stretch" />
+                    <ListView x:Name="workOrderRoutings"
+                              Grid.Column="2"
+                              HorizontalAlignment="Stretch"
+                              IsSynchronizedWithCurrentItem="True"
+                              ItemsSource="{Binding WorkOrderRoutings}"
+                              VerticalAlignment="Stretch">
+                        <ListView.Resources>
+                            <conv:TextBrushConverter x:Key="textBrushConverter" />
+                        </ListView.Resources>
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn DisplayMemberBinding="{Binding Path=OperationSequence}"
+                                                    Header="Sequence" />
+                                    <GridViewColumn DisplayMemberBinding="{Binding Path=ScheduledStartDate}"
+                                                    Header="Scheduled Start Date" />
+                                    <GridViewColumn DisplayMemberBinding="{Binding Path=ScheduledEndDate}"
+                                                    Header="Scheduled End Date" />
+                                    <GridViewColumn Header="Actual Start Date">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=ActualStartDate}">
+                                                    <TextBlock.Foreground>
+                                                        <MultiBinding
+                                                            Converter="{StaticResource textBrushConverter}">
+                                                            <Binding Path="ScheduledStartDate" />
+                                                            <Binding Path="ActualStartDate" />
+                                                        </MultiBinding>
+                                                    </TextBlock.Foreground>
+                                                </TextBlock>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Actual End Date">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=ActualEndDate}">
+                                                    <TextBlock.Foreground>
+                                                        <MultiBinding
+                                                            Converter="{StaticResource textBrushConverter}">
+                                                            <Binding Path="ScheduledEndDate" />
+                                                            <Binding Path="ActualEndDate" />
+                                                        </MultiBinding>
+                                                    </TextBlock.Foreground>
+                                                </TextBlock>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn DisplayMemberBinding="{Binding Path=ActualResourceHrs}"
+                                                    Header="Hours" />
+                                    <GridViewColumn DisplayMemberBinding="{Binding Path=PlannedCost}"
+                                                    Header="Planned Cost" />
+                                    <GridViewColumn Header="Actual Cost">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Path=ActualCost}">
+                                                    <TextBlock.Foreground>
+                                                        <MultiBinding
+                                                            Converter="{StaticResource textBrushConverter}">
+                                                            <Binding Path="PlannedCost" />
+                                                            <Binding Path="ActualCost" />
+                                                        </MultiBinding>
+                                                    </TextBlock.Foreground>
+                                                </TextBlock>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <StackPanel Grid.Row="1"
+                                Margin="0,8,0,0"
+                                Orientation="Horizontal"
+                                VerticalAlignment="Top">
+                        <Button Command="{Binding CreateWorkOrderCommand}"
+                                Content="Create"
+                                IsEnabled="{Binding IsCreateWorkOrderEnabled}"
+                                Margin="0,0,10,0"
+                                Width="80" />
+                        <Button Content="Edit"
+                                IsEnabled="{Binding IsEditWorkOrderEnabled}"
+                                Margin="0,0,10,0 "
+                                Width="80" />
+                        <Button Content="Delete"
+                                IsEnabled="{Binding IsDeleteWorkOrderEnabled}"
+                                Width="80" />
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </DockPanel>
+</Window>

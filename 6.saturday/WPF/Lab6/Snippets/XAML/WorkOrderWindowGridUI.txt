@@ -1,0 +1,38 @@
+            <Label Content="Stock Quantity: "
+                   Grid.Row="1" />
+            <TextBox x:Name="stockQty" 
+                     Grid.Column="1"
+                     Grid.Row="1"
+                     Height="20"
+                     VerticalAlignment="Top">
+            </TextBox>
+
+            <Label Content="Start Date:" 
+                   Grid.Row="2" />
+            <DatePicker x:Name="startDate" 
+                        Grid.Column="1" 
+                        Grid.Row="2"
+                        Height="25"
+                        SelectedDateFormat="Long"
+                        VerticalAlignment="Top">
+            </DatePicker>
+
+            <Label Content="End Date: "
+                    Grid.Row="3"  />
+            <DatePicker x:Name="endDate" 
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Height="25"
+                        SelectedDateFormat="Long"
+                        VerticalAlignment="Top">
+            </DatePicker>
+
+            <Label Content="Due Date: "
+                   Grid.Row="4" />
+            <DatePicker x:Name="dueDate" 
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        Height="25"
+                        SelectedDateFormat="Long"
+                        VerticalAlignment="Top">
+            </DatePicker>

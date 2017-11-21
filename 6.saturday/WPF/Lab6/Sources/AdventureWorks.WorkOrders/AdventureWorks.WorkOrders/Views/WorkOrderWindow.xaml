@@ -1,0 +1,113 @@
+﻿<Window x:Class="AdventureWorks.WorkOrders.Views.WorkOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:v="clr-namespace:AdventureWorks.WorkOrders.ValidationRules"
+        xmlns:local="clr-namespace:AdventureWorks.WorkOrders.Views"
+        mc:Ignorable="d"
+        Title="Work Order" Height="300" Width="300" ResizeMode="NoResize" SizeToContent="Height"
+        WindowStartupLocation="CenterOwner">
+    <DockPanel>
+        <DockPanel>
+            <Grid x:Name="orderDetail" DockPanel.Dock="Top" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Content="Order Quantity: " />
+                <TextBox x:Name="orderQty" Grid.Column="1" Grid.Row="0" Height="20" VerticalAlignment="Top">
+                    <TextBox.Text>
+                        <Binding Path="Order.OrderQty" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                 ValidatesOnDataErrors="True">
+                            <Binding.ValidationRules>
+                                <v:NumericValidationRule />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+
+                <Label Content="Stock Quantity: "
+                       Grid.Row="1" />
+                <TextBox x:Name="stockQty"
+                         Grid.Column="1"
+                         Grid.Row="1"
+                         Height="20"
+                         VerticalAlignment="Top">
+                    <TextBox.Text>
+                        <Binding Path="Order.StockedQty" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                 ValidatesOnDataErrors="True">
+                            <Binding.ValidationRules>
+                                <v:NumericValidationRule />
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+
+                <Label Content="Start Date:"
+                       Grid.Row="2" />
+                <DatePicker x:Name="startDate"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Height="25"
+                            SelectedDateFormat="Long"
+                            VerticalAlignment="Top">
+
+                    <DatePicker.SelectedDate>
+                        <Binding Path="Order.StartDate" Mode="TwoWay" ValidatesOnDataErrors="True" />
+                    </DatePicker.SelectedDate>
+
+                </DatePicker>
+
+                <Label Content="End Date: "
+                       Grid.Row="3" />
+                <DatePicker x:Name="endDate"
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            Height="25"
+                            SelectedDateFormat="Long"
+                            VerticalAlignment="Top">
+                    <DatePicker.SelectedDate>
+                        <Binding Path="Order.EndDate" Mode="TwoWay" ValidatesOnDataErrors="True" />
+                    </DatePicker.SelectedDate>
+                </DatePicker>
+
+                <Label Content="Due Date: "
+                       Grid.Row="4" />
+                <DatePicker x:Name="dueDate"
+                            Grid.Column="1"
+                            Grid.Row="4"
+                            Height="25"
+                            SelectedDateFormat="Long"
+                            VerticalAlignment="Top">
+                    <DatePicker.SelectedDate>
+                        <Binding Path="Order.DueDate" Mode="TwoWay" ValidatesOnDataErrors="True" />
+                    </DatePicker.SelectedDate>
+                </DatePicker>
+
+            </Grid>
+
+            <StackPanel DockPanel.Dock="Bottom"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,5,5"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Bottom">
+                <Button Content="OK"
+                        IsDefault="True"
+                        Width="80" />
+                <Button Content="Cancel"
+                        IsCancel="True"
+                        Margin="10,0,0,0"
+                        Width="80" />
+            </StackPanel>
+
+        </DockPanel>
+    </DockPanel>
+</Window>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>ConvertToBrush</Title>
+      <Author>Content Master</Author>
+      <Shortcut>ConvertToBrush</Shortcut>
+      <Description>Add the Convert method to the TextBrushConverter class</Description>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[if (null == values)
+            {
+                return false;
+            }
+
+            SolidColorBrush brush = new SolidColorBrush();
+            if ((values[0] is DateTime) &&
+                (values[1] is DateTime))
+            {
+                DateTime scheduledDate = (DateTime)values[0];
+                DateTime actualDate = (DateTime)values[1];
+                brush.Color = (actualDate > scheduledDate) ? Colors.Red : Colors.Black;
+                return brush;
+            }
+            else
+            {
+                decimal plannedCost = (decimal)values[0];
+                decimal actualCost = (decimal)values[1];
+                brush.Color = (actualCost > plannedCost) ? Colors.Red : Colors.Black;
+                return brush;
+            }
+]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

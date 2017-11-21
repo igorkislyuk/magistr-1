@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DataErrorInfoGet</Title>
+      <Author>Content Master</Author>
+      <Shortcut>DataErrorInfoGet</Shortcut>
+      <Description>Add code to the name property to check the value is valid</Description>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="VB">
+        <![CDATA[If columnName = "OrderQty" Then
+    If Me._OrderQty <= 0 Then
+        Return "Order Quantity cannot be less than or equal to 0."
+    End If
+End If
+
+If columnName = "StockedQty" Then
+    If Me._StockedQty <= 0 Then
+        Return "Stock Quantity cannot be less than or equal to 0."
+    End If
+    
+    If Me._StockedQty <> Me._OrderQty Then
+        Return "Stock Quantity must be the same value as Order Quantity."
+    End If
+End If
+
+If columnName = "StartDate" Then
+    If Me._StartDate < DateTime.Today Then
+        Return String.Format("Start Date cannot be before {0:MM/dd/yyyy}.", DateTime.Today)
+    End If
+End If
+
+If columnName = "EndDate" Then
+    If Me._EndDate < Me._StartDate Then
+        Return String.Format("End Date cannot be before {0:MM/dd/yyyy}.", Me._StartDate)
+    End If
+End If
+
+If columnName = "DueDate" Then
+    If Me._DueDate < Me._StartDate Then
+        Return String.Format("Due Date cannot be before {0:MM/dd/yyyy}.", Me._StartDate)
+    End If
+End If
+
+Return Nothing]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
