@@ -1,0 +1,20 @@
+﻿<Window x:Class="ContactLibraryWPF.View.DetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContactLibraryWPF.View"
+        mc:Ignorable="d"
+        Title="Contact Detail" Height="258.974" Width="457.265" ResizeMode="NoResize">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="182,52,0,0" TextWrapping="Wrap" Text="{Binding Path=Name, Mode=TwoWay}" VerticalAlignment="Top" Width="156"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="182,83,0,0" TextWrapping="Wrap" Text="{Binding Path=Phone, Mode=TwoWay}" VerticalAlignment="Top" Width="156"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="182,114,0,0" TextWrapping="Wrap" Text="{Binding Path=Address, Mode=TwoWay}" VerticalAlignment="Top" Width="156"/>
+        <Button Content="Save" Margin="280,174,0,0" Click="SaveClick" Height="36" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="120,174,0,0" Width="144" Click="CancelClick" Height="36" VerticalAlignment="Top"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="115,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,2.993" Height="26" Width="62"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="115,83,0,0" VerticalAlignment="Top"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="120,114,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

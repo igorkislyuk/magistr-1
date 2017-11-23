@@ -1,0 +1,9 @@
+﻿
+List of requirments for WPF application "ContactLibrary"
+
+- application should provide list for observing all contacts with proper formatting
+- application should provide add / delete button within that list
+- application should open window of editing person on the double click
+- this window should populate two options - save / cancel
+- all updated data should be persisted between launches
+
