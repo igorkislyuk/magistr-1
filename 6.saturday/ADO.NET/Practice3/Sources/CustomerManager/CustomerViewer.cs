@@ -34,8 +34,6 @@ namespace CustomerManager
 
         private void CustomerViewer_Load(object sender, EventArgs e)
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SampleContext>());
-
             context.Orders.Add(new Order
             {
                 ProductName = "Audio",
@@ -58,7 +56,8 @@ namespace CustomerManager
             {
                 Customer customer = new Customer
                 {
-                    Name = this.textBoxname.Text,
+                    FirstName = this.textBoxname.Text,
+                    LastName = this.textBoxlastname.Text,
                     Email = this.textBoxmail.Text,
                     Age = Int32.Parse(this.textBoxage.Text),
                     Photo = Ph
@@ -110,7 +109,7 @@ namespace CustomerManager
 
         private void buttonOut_Click(object sender, EventArgs e)
         {
-            var query = context.Customers.OrderBy(b => b.Name);
+            var query = context.Customers.OrderBy(b => b.FirstName);
             customerList.DataSource = query.ToList();
 
             Output();

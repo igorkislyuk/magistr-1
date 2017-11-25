@@ -15,7 +15,9 @@ namespace CodeFirst
 
         [Required]
         [MaxLength(30)]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
 
         [MaxLength(100)]
         public string Email { get; set; }
@@ -28,7 +30,7 @@ namespace CodeFirst
 
         public override string ToString()
         {
-            string s = Name + ", email: " + Email;
+            string s = FirstName + ", email: " + Email;
             return s;
         }
 
