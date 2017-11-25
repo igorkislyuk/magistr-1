@@ -57,7 +57,7 @@
             // 
             this.customerList.FormattingEnabled = true;
             this.customerList.Location = new System.Drawing.Point(24, 23);
-            this.customerList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.customerList.Margin = new System.Windows.Forms.Padding(6);
             this.customerList.Name = "customerList";
             this.customerList.Size = new System.Drawing.Size(238, 33);
             this.customerList.TabIndex = 0;
@@ -68,7 +68,7 @@
             this.orderlistBox.FormattingEnabled = true;
             this.orderlistBox.ItemHeight = 25;
             this.orderlistBox.Location = new System.Drawing.Point(26, 75);
-            this.orderlistBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.orderlistBox.Margin = new System.Windows.Forms.Padding(6);
             this.orderlistBox.Name = "orderlistBox";
             this.orderlistBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.orderlistBox.Size = new System.Drawing.Size(236, 179);
@@ -77,7 +77,7 @@
             // textBoxname
             // 
             this.textBoxname.Location = new System.Drawing.Point(444, 25);
-            this.textBoxname.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxname.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxname.Name = "textBoxname";
             this.textBoxname.Size = new System.Drawing.Size(196, 31);
             this.textBoxname.TabIndex = 2;
@@ -85,7 +85,7 @@
             // textBoxlastname
             // 
             this.textBoxlastname.Location = new System.Drawing.Point(444, 75);
-            this.textBoxlastname.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxlastname.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxlastname.Name = "textBoxlastname";
             this.textBoxlastname.Size = new System.Drawing.Size(196, 31);
             this.textBoxlastname.TabIndex = 3;
@@ -93,7 +93,7 @@
             // textBoxmail
             // 
             this.textBoxmail.Location = new System.Drawing.Point(444, 125);
-            this.textBoxmail.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxmail.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxmail.Name = "textBoxmail";
             this.textBoxmail.Size = new System.Drawing.Size(196, 31);
             this.textBoxmail.TabIndex = 4;
@@ -101,7 +101,7 @@
             // textBoxage
             // 
             this.textBoxage.Location = new System.Drawing.Point(444, 171);
-            this.textBoxage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxage.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxage.Name = "textBoxage";
             this.textBoxage.Size = new System.Drawing.Size(196, 31);
             this.textBoxage.TabIndex = 5;
@@ -109,7 +109,7 @@
             // buttonFile
             // 
             this.buttonFile.Location = new System.Drawing.Point(444, 221);
-            this.buttonFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonFile.Margin = new System.Windows.Forms.Padding(6);
             this.buttonFile.Name = "buttonFile";
             this.buttonFile.Size = new System.Drawing.Size(200, 44);
             this.buttonFile.TabIndex = 6;
@@ -120,7 +120,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Location = new System.Drawing.Point(698, 21);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(150, 44);
             this.buttonAdd.TabIndex = 7;
@@ -131,7 +131,7 @@
             // buttonOut
             // 
             this.buttonOut.Location = new System.Drawing.Point(860, 21);
-            this.buttonOut.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonOut.Margin = new System.Windows.Forms.Padding(6);
             this.buttonOut.Name = "buttonOut";
             this.buttonOut.Size = new System.Drawing.Size(150, 44);
             this.buttonOut.TabIndex = 8;
@@ -142,28 +142,30 @@
             // buttonEdit
             // 
             this.buttonEdit.Location = new System.Drawing.Point(1050, 25);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(6);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(150, 44);
             this.buttonEdit.TabIndex = 9;
             this.buttonEdit.Text = "Редактировать";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDel
             // 
             this.buttonDel.Location = new System.Drawing.Point(698, 77);
-            this.buttonDel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(6);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(150, 44);
             this.buttonDel.TabIndex = 10;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // CustomerradioButton
             // 
             this.CustomerradioButton.AutoSize = true;
             this.CustomerradioButton.Location = new System.Drawing.Point(12, 33);
-            this.CustomerradioButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.CustomerradioButton.Margin = new System.Windows.Forms.Padding(6);
             this.CustomerradioButton.Name = "CustomerradioButton";
             this.CustomerradioButton.Size = new System.Drawing.Size(146, 29);
             this.CustomerradioButton.TabIndex = 11;
@@ -175,7 +177,7 @@
             // 
             this.OrderradioButton.AutoSize = true;
             this.OrderradioButton.Location = new System.Drawing.Point(12, 83);
-            this.OrderradioButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.OrderradioButton.Margin = new System.Windows.Forms.Padding(6);
             this.OrderradioButton.Name = "OrderradioButton";
             this.OrderradioButton.Size = new System.Drawing.Size(108, 29);
             this.OrderradioButton.TabIndex = 12;
@@ -186,7 +188,7 @@
             // textBoxCustomer
             // 
             this.textBoxCustomer.Location = new System.Drawing.Point(810, 275);
-            this.textBoxCustomer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxCustomer.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxCustomer.Name = "textBoxCustomer";
             this.textBoxCustomer.Size = new System.Drawing.Size(196, 31);
             this.textBoxCustomer.TabIndex = 13;
@@ -196,19 +198,20 @@
             this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.GridView.Location = new System.Drawing.Point(0, 350);
-            this.GridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.GridView.Margin = new System.Windows.Forms.Padding(6);
             this.GridView.Name = "GridView";
             this.GridView.Size = new System.Drawing.Size(1224, 250);
             this.GridView.TabIndex = 14;
+            this.GridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_CellClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.CustomerradioButton);
             this.groupBox1.Controls.Add(this.OrderradioButton);
             this.groupBox1.Location = new System.Drawing.Point(860, 125);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(376, 133);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -285,7 +288,7 @@
             this.Controls.Add(this.textBoxname);
             this.Controls.Add(this.orderlistBox);
             this.Controls.Add(this.customerList);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CustomerViewer";
             this.Text = "Customer Viewer";
             this.Load += new System.EventHandler(this.CustomerViewer_Load);
