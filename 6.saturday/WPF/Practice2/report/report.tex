@@ -1,0 +1,131 @@
+\documentclass[14pt,a4paper]{extreport}
+
+% Caption configuration
+\usepackage{caption}
+
+% Times New Roman, be sure to build with XeLaTeX
+\usepackage{fontspec}
+\usepackage[russian]{babel}
+\setmainfont{Times New Roman}
+
+% mock data
+\usepackage{lipsum}
+
+% russian
+\usepackage[utf8]{inputenc}
+
+\linespread{1.5}
+
+\usepackage{graphicx}
+\usepackage[
+    letterpaper,
+    left        = 2cm,
+    right       = 1cm,
+    top         = 1cm,
+    headheight  = 2cm
+]{geometry}
+
+%% New commands
+
+% caption | screenshot index
+\newcommand{\screenshot}[2]{\begin{figure}[ht]%
+\centering\includegraphics[width=0.8\textwidth]{../Screenshots/Screenshot_#2}%
+\caption{#1}%
+\label{picture#2}%
+\end{figure}%
+}
+
+\newcommand{\header}[1]{%
+{
+\fontsize{16pt}{14pt}\selectfont
+\begin{center}
+\textbf{\MakeUppercase{#1}:}
+\end{center}
+}
+}
+
+\newcommand{\anan}{Ананченко~И.~В.}
+\newcommand{\osipov}{Осипов~Н.~А.}
+\newcommand{\igork}{Кислюк~И.~В.}
+\newcommand{\egor}{Антонов~Е.~П.}
+\newcommand{\igorl}{Лебедев~И.~Ю.}
+
+% Configurations
+
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+% Рис 1. -> Рисунок 1
+\DeclareCaptionFormat{myformat}{\fontsize{12}{12}\selectfont#1#2#3}
+\captionsetup[figure]{format={myformat},name={Рисунок},labelsep=endash}
+
+\begin{document}
+
+	\begin{titlepage}
+	\begin{center}	
+		\fontsize{14pt}{14pt}\selectfont
+		МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ\\
+
+		\vspace*{0.6\baselineskip}
+		
+		САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, МЕХАНИКИ И ОПТИКИ
+		
+		\vspace*{0.6\baselineskip}
+		ФАКУЛЬТЕТ ИНФОКОММУНИКАЦИОННЫХ ТЕХНОЛОГИЙ
+		КАФЕДРА ПРОГРАММНЫХ СИСТЕМ
+	
+		\vspace*{7\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		Отчет по лабораторной работе
+		
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+		\textbf{Разработка пользовательского интерфейса}\\
+		\vspace*{1.15\baselineskip}
+		\end{center}
+	
+	\vspace*{2\baselineskip}
+	\begin{flushright}
+	\fontseries{m}\fontsize{14pt}{14pt}\selectfont
+	\textbf{Выполнили:}\\
+	\igork\\
+	студенты группы К4120\\
+	Проверил: \osipov\\
+	\end{flushright}
+	
+	\vspace{\fill}
+	\begin{center}
+	Санкт-Петербург\\
+	2017
+	\end{center}
+	
+\end{titlepage}
+
+\newpage
+
+\header{Цель работы}
+
+\fontsize{14pt}{14pt}\selectfont
+
+Необходимо создать приложение на основе проекта шаблона WPF:
+
+\clearpage
+
+\header{Ход работы}
+
+\begin{enumerate}
+
+\item Необходимо создать приложение по шаблону
+\item Выполнить действия указанные в задании
+
+\screenshot{Пример вывода информации через AlertController}{3}
+\screenshot{Пример формирования интерфейса для форматирования текста}{5}
+\screenshot{Пример форматирования текста}{7}
+
+\end{enumerate}
+
+\clearpage
+
+\header{Вывод}
+
+Таким образом было задано и построено базовое приложение WPF
+
+\end{document}
+
