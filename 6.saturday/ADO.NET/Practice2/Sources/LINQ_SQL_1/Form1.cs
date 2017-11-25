@@ -18,14 +18,20 @@ namespace LINQ_SQL_1
         public Form1()
         {
             InitializeComponent();
+        }
 
-            var results = from c in db.GetTable<Customer>()
-                where c.City == "London"
-                select c;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var custQuery =
+                from cust in db.GetTable<Customer>()
+                where cust.Orders.Any()
+                select cust;
 
-            foreach (var c in results)
+            foreach (var custObj in custQuery)
             {
-                listBox1.Items.Add(c.ToString());
+                ListViewItem item = listView1.Items.Add(custObj.CustomerID.ToString());
+                item.SubItems.Add(custObj.City.ToString());
+                item.SubItems.Add(custObj.Orders.Count.ToString());
             }
         }
     }
