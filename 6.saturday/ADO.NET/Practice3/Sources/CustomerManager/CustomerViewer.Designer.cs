@@ -49,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.ViporderradioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -206,6 +207,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ViporderradioButton);
             this.groupBox1.Controls.Add(this.CustomerradioButton);
             this.groupBox1.Controls.Add(this.OrderradioButton);
             this.groupBox1.Location = new System.Drawing.Point(860, 125);
@@ -263,6 +265,18 @@
             this.label4.Size = new System.Drawing.Size(50, 25);
             this.label4.TabIndex = 20;
             this.label4.Text = "Age";
+            // 
+            // ViporderradioButton
+            // 
+            this.ViporderradioButton.AutoSize = true;
+            this.ViporderradioButton.Location = new System.Drawing.Point(190, 33);
+            this.ViporderradioButton.Margin = new System.Windows.Forms.Padding(6);
+            this.ViporderradioButton.Name = "ViporderradioButton";
+            this.ViporderradioButton.Size = new System.Drawing.Size(147, 29);
+            this.ViporderradioButton.TabIndex = 13;
+            this.ViporderradioButton.TabStop = true;
+            this.ViporderradioButton.Text = "VIP Orders";
+            this.ViporderradioButton.UseVisualStyleBackColor = true;
             // 
             // CustomerViewer
             // 
@@ -323,6 +337,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton ViporderradioButton;
     }
 }
 

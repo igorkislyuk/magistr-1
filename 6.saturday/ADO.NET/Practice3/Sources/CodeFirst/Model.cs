@@ -61,4 +61,10 @@ namespace CodeFirst
                    PurchaseDate;
         }
     }
+
+    [Table("VipOrders")]
+    public class VipOrder : Order
+    {
+        public string status { get; set; }
+    }
 }
