@@ -1,0 +1,48 @@
+﻿body
+{
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+}
+ 
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+ 
+.menu
+{
+    background-color:black;
+    height: 20px;
+}
+.menu ul
+{
+    list-style:none;
+}
+.menu li
+{
+    display:inline;
+}
+.menu a
+{
+    text-decoration:none;
+    color:White;
+    width:150px;
+    padding-top: 6px;
+    padding-left:30px;
+}
+.menu a:hover
+{
+    color:red;
+}
+table
+{
+    border:1px solid silver; 
+    vertical-align:middle;
+    text-align:center;  
+}
+td
+{
+    border:1px solid silver;
+}

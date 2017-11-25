@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<div>
+    <div>
+        <h3>Credit programs</h3>
+        <table>
+            <tr>
+                <td>
+                    <p>Credit type</p>
+                </td>
+                <td>
+                    <p>
+                        Credit period
+                    </p>
+                </td>
+                <td>
+                    <p>Max summary</p>
+                </td>
+                <td>
+                    Rate (%)
+                </td>
+            </tr>
+            @foreach (var c in ViewBag.Credits)
+            {
+                <tr>
+                    <td>
+                        <p>@c.Head</p>
+                    </td>
+                    <td>
+                        <p>
+                            @c.Period
+                        </p>
+                    </td>
+                    <td>
+                        <p>@c.Sum</p>
+                    </td>
+                    <td>
+                        @c.Procent %
+                    </td>
+                </tr>
+            }
+        </table>
+        <a href="/Home/CreateBid">Order a credit</a>
+    </div>
+</div>
+</body>
+</html>
