@@ -266,3 +266,7 @@ __pycache__/
 *.toc
 *.synctex.gz
 *.tex.bak
+
+# matlab
+
+*.asv
