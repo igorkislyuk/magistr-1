@@ -1,12 +1,12 @@
 Model {
-  Name			  "lab2_MC"
+  Name			  "lab2_MC_integration"
   Version		  8.9
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.18"
+    ComputedModelVersion    "1.25"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -68,8 +68,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[2810.0, 1428.0]
-	ZoomFactor		[1.75]
-	Offset			[-2.7857142857142776, -46.3479853479854]
+	ZoomFactor		[1.56]
+	Offset			[0.0, 0.0]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "igorkislyuk"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 30 02:09:10 2017"
-  RTWModifiedTimeStamp	  433908489
-  ModelVersionFormat	  "1.%<AutoIncrement:18>"
+  LastModifiedDate	  "Thu Nov 30 02:53:21 2017"
+  RTWModifiedTimeStamp	  433910996
+  ModelVersionFormat	  "1.%<AutoIncrement:25>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -157,11 +157,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "lab2_MC"
+    model_		    "lab2_MC_integration"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "lab2_MC"
+      Cell		      "lab2_MC_integration"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -212,7 +212,7 @@ Model {
 	  DisabledProps		  []
 	  Description		  ""
 	  StartTime		  "0.0"
-	  StopTime		  "1000"
+	  StopTime		  "5000.0"
 	  AbsTol		  "auto"
 	  FixedStep		  "1"
 	  InitialStep		  "auto"
@@ -868,7 +868,7 @@ Model {
       Name		      "Configuration"
       ExtraOptions	      ""
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition    [ 133, 239, 1013, 869 ]
+      ConfigPrmDlgPosition    [ 133, 200, 1013, 830 ]
     }
     PropName		    "ConfigurationSets"
   }
@@ -1026,7 +1026,7 @@ Model {
     }
   }
   System {
-    Name		    "lab2_MC"
+    Name		    "lab2_MC_integration"
     Location		    [-6, -6, 1447, 867]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -1040,9 +1040,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "175"
+    ZoomFactor		    "156"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "14"
+    SIDHighWatermark	    "11"
     Block {
       BlockType		      Clock
       Name		      "Clock"
@@ -1052,27 +1052,19 @@ Model {
     }
     Block {
       BlockType		      Constant
-      Name		      "Constant"
-      SID		      "2"
-      Position		      [200, 200, 230, 230]
-      ZOrder		      -2
-      Value		      "25"
-    }
-    Block {
-      BlockType		      Constant
       Name		      "Constant1"
-      SID		      "3"
+      SID		      "2"
       Position		      [360, 215, 390, 245]
-      ZOrder		      -3
-      Value		      "100"
+      ZOrder		      -2
+      Value		      "108"
     }
     Block {
       BlockType		      DiscreteIntegrator
       Name		      "Discrete-Time\nIntegrator"
-      SID		      "4"
+      SID		      "3"
       Ports		      [1, 1]
       Position		      [355, 139, 390, 171]
-      ZOrder		      -4
+      ZOrder		      -3
       OutDataTypeStr	      "double"
       ICPrevOutput	      "DiscIntNeverNeededParam"
       ICPrevScaledInput	      "DiscIntNeverNeededParam"
@@ -1080,46 +1072,35 @@ Model {
     Block {
       BlockType		      Display
       Name		      "Display"
-      SID		      "5"
+      SID		      "4"
       Ports		      [1]
       Position		      [610, 150, 700, 180]
-      ZOrder		      -5
+      ZOrder		      -4
       Decimation	      "1"
     }
     Block {
       BlockType		      Fcn
       Name		      "Fcn"
-      SID		      "6"
+      SID		      "5"
       Position		      [145, 130, 205, 160]
-      ZOrder		      -6
-      Expr		      "(u[1]-2)^2+(u[2]-3)^2"
+      ZOrder		      -5
+      Expr		      "-u[1]^2+7*u[1]"
     }
     Block {
       BlockType		      Fcn
       Name		      "Fcn1"
-      SID		      "7"
+      SID		      "6"
       Position		      [500, 150, 560, 180]
-      ZOrder		      -7
+      ZOrder		      -6
       Expr		      "u[1]*u[2]/u[3]"
     }
     Block {
       BlockType		      Mux
-      Name		      "Mux"
-      SID		      "8"
-      Ports		      [2, 1]
-      Position		      [130, 126, 135, 164]
-      ZOrder		      -8
-      ShowName		      off
-      Inputs		      "2"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      Mux
       Name		      "Mux1"
-      SID		      "9"
+      SID		      "7"
       Ports		      [3, 1]
       Position		      [470, 146, 475, 184]
-      ZOrder		      -9
+      ZOrder		      -7
       ShowName		      off
       Inputs		      "3"
       DisplayOption	      "bar"
@@ -1127,21 +1108,20 @@ Model {
     Block {
       BlockType		      RelationalOperator
       Name		      "Relational\nOperator"
-      SID		      "10"
+      SID		      "8"
       Ports		      [2, 1]
       Position		      [270, 137, 300, 168]
-      ZOrder		      -10
-      Operator		      "<="
+      ZOrder		      -8
       InputSameDT	      off
       OutDataTypeStr	      "boolean"
     }
     Block {
       BlockType		      Scope
       Name		      "Scope"
-      SID		      "11"
+      SID		      "9"
       Ports		      [1]
       Position		      [620, 74, 650, 106]
-      ZOrder		      -11
+      ZOrder		      -9
       ScopeSpecificationString "C++SS(StrPVP('Location','[1284, 656, 1894, 955]'),StrPVP('Open','off'),MxPVP('AxesTitl"
       "es',53,'struct(''axes1'',''%<SignalLabel>'')'),StrPVP('YMin','0'),StrPVP('YMax','105'),StrPVP('DataFormat','Stru"
       "ctureWithTime'),StrPVP('BlockParamSampleTime','0'),StrPVP('LimitDataPoints','on'),StrPVP('Decimation','1'),StrPV"
@@ -1151,117 +1131,47 @@ Model {
     Block {
       BlockType		      UniformRandomNumber
       Name		      "Uniform Random\nNumber"
-      SID		      "12"
+      SID		      "10"
       Position		      [35, 84, 65, 116]
-      ZOrder		      -12
-      Minimum		      "-3"
-      Maximum		      "7"
+      ZOrder		      -10
+      Minimum		      "-6"
+      Maximum		      "10"
+      Seed		      "5"
       SampleTime	      "0"
     }
     Block {
       BlockType		      UniformRandomNumber
       Name		      "Uniform Random\nNumber1"
-      SID		      "13"
-      Position		      [35, 159, 65, 191]
-      ZOrder		      -13
-      Minimum		      "-2"
+      SID		      "11"
+      Position		      [70, 204, 100, 236]
+      ZOrder		      -11
+      Minimum		      "0"
       Maximum		      "8"
-      Seed		      "11"
       SampleTime	      "0"
     }
-    Block {
-      BlockType		      Reference
-      Name		      "XY Graph"
-      SID		      "14"
-      Ports		      [2]
-      Position		      [100, 275, 130, 310]
-      ZOrder		      1
-      LibraryVersion	      "1.391"
-      SourceBlock	      "simulink/Sinks/XY Graph"
-      SourceType	      "XY scope."
-      SourceProductName	      "Simulink"
-      SourceProductBaseCode   "SL"
-      ContentPreviewEnabled   off
-      xmin		      "-2"
-      xmax		      "8"
-      ymin		      "-2"
-      ymax		      "8"
-      st		      "0"
-    }
     Line {
       ZOrder		      1
-      SrcBlock		      "Uniform Random\nNumber"
-      SrcPort		      1
-      Points		      [12, 0]
-      Branch {
-	ZOrder			16
-	Points			[0, -30; -81, 0; 0, 230]
-	DstBlock		"XY Graph"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			15
-	Points			[28, 0; 0, 35]
-	DstBlock		"Mux"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      2
-      SrcBlock		      "Uniform Random\nNumber1"
-      SrcPort		      1
-      Points		      [22, 0]
-      Branch {
-	ZOrder			13
-	Points			[0, 110]
-	DstBlock		"XY Graph"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			12
-	Points			[18, 0; 0, -20]
-	DstBlock		"Mux"
-	DstPort			2
-      }
-    }
-    Line {
-      ZOrder		      3
-      SrcBlock		      "Mux"
-      SrcPort		      1
-      DstBlock		      "Fcn"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      4
-      SrcBlock		      "Constant"
-      SrcPort		      1
-      Points		      [10, 0; 0, -55]
-      DstBlock		      "Relational\nOperator"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      5
       SrcBlock		      "Fcn"
       SrcPort		      1
       DstBlock		      "Relational\nOperator"
       DstPort		      1
     }
     Line {
-      ZOrder		      6
+      ZOrder		      2
       SrcBlock		      "Relational\nOperator"
       SrcPort		      1
       DstBlock		      "Discrete-Time\nIntegrator"
       DstPort		      1
     }
     Line {
-      ZOrder		      7
+      ZOrder		      3
       SrcBlock		      "Discrete-Time\nIntegrator"
       SrcPort		      1
       DstBlock		      "Mux1"
       DstPort		      1
     }
     Line {
-      ZOrder		      8
+      ZOrder		      4
       SrcBlock		      "Constant1"
       SrcPort		      1
       Points		      [30, 0; 0, -65]
@@ -1269,7 +1179,7 @@ Model {
       DstPort		      2
     }
     Line {
-      ZOrder		      9
+      ZOrder		      5
       SrcBlock		      "Clock"
       SrcPort		      1
       Points		      [65, 0]
@@ -1277,18 +1187,44 @@ Model {
       DstPort		      3
     }
     Line {
-      ZOrder		      10
+      ZOrder		      6
       SrcBlock		      "Mux1"
       SrcPort		      1
       DstBlock		      "Fcn1"
       DstPort		      1
     }
     Line {
-      ZOrder		      11
+      ZOrder		      7
       SrcBlock		      "Fcn1"
       SrcPort		      1
-      DstBlock		      "Display"
+      Points		      [15, 0]
+      Branch {
+	ZOrder			8
+	DstBlock		"Display"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			9
+	Points			[0, -75]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      10
+      SrcBlock		      "Uniform Random\nNumber"
+      SrcPort		      1
+      Points		      [30, 0; 0, 45]
+      DstBlock		      "Fcn"
       DstPort		      1
+    }
+    Line {
+      ZOrder		      11
+      SrcBlock		      "Uniform Random\nNumber1"
+      SrcPort		      1
+      Points		      [150, 0]
+      DstBlock		      "Relational\nOperator"
+      DstPort		      2
     }
   }
 }

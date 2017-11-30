@@ -1,12 +1,12 @@
 Model {
-  Name			  "lab2_MC"
+  Name			  "part1"
   Version		  8.9
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.17"
+    ComputedModelVersion    "1.20"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -52,7 +52,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -68,8 +68,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[2810.0, 1428.0]
-	ZoomFactor		[1.75]
-	Offset			[-2.7857142857142776, -46.3479853479854]
+	ZoomFactor		[1.5]
+	Offset			[-68.1666666666664, -84.919413919413955]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -101,11 +101,11 @@ Model {
   Creator		  "IEUser"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "IEUser"
+  LastModifiedBy	  "igorkislyuk"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Nov 15 10:30:19 2005"
-  RTWModifiedTimeStamp	  433908489
-  ModelVersionFormat	  "1.%<AutoIncrement:17>"
+  LastModifiedDate	  "Thu Nov 30 02:27:36 2017"
+  RTWModifiedTimeStamp	  433909653
+  ModelVersionFormat	  "1.%<AutoIncrement:20>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -157,11 +157,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "lab2_MC"
+    model_		    "part1"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "lab2_MC"
+      Cell		      "part1"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -237,7 +237,7 @@ Model {
 	  ZeroCrossControl	  "UseLocalSettings"
 	  ZeroCrossAlgorithm	  "Nonadaptive"
 	  AlgebraicLoopSolver	  "TrustRegion"
-	  SolverInfoToggleStatus  off
+	  SolverInfoToggleStatus  on
 	  IsAutoAppliedInSIP	  off
 	  SolverResetMethod	  "Fast"
 	  PositivePriorityOrder	  off
@@ -431,7 +431,7 @@ Model {
 	  SimStateInterfaceChecksumMismatchMsg "warning"
 	  SimStateOlderReleaseMsg "error"
 	  InitInArrayFormatMsg	  "warning"
-	  StrictBusMsg		  "Warning"
+	  StrictBusMsg		  "ErrorLevel1"
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
 	  SymbolicDimMinMaxWarning "warning"
@@ -868,7 +868,7 @@ Model {
       Name		      "Configuration"
       ExtraOptions	      ""
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition    [ 133, 239, 1013, 869 ]
+      ConfigPrmDlgPosition    [ 204, 139, 1084, 769 ]
     }
     PropName		    "ConfigurationSets"
   }
@@ -1026,7 +1026,7 @@ Model {
     }
   }
   System {
-    Name		    "lab2_MC"
+    Name		    "part1"
     Location		    [-6, -6, 1447, 867]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -1040,17 +1040,20 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "175"
+    ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "14"
     Block {
       BlockType		      Clock
       Name		      "Clock"
+      SID		      "1"
       Position		      [365, 280, 385, 300]
       ZOrder		      -1
     }
     Block {
       BlockType		      Constant
       Name		      "Constant"
+      SID		      "2"
       Position		      [200, 200, 230, 230]
       ZOrder		      -2
       Value		      "25"
@@ -1058,6 +1061,7 @@ Model {
     Block {
       BlockType		      Constant
       Name		      "Constant1"
+      SID		      "3"
       Position		      [360, 215, 390, 245]
       ZOrder		      -3
       Value		      "100"
@@ -1065,6 +1069,7 @@ Model {
     Block {
       BlockType		      DiscreteIntegrator
       Name		      "Discrete-Time\nIntegrator"
+      SID		      "4"
       Ports		      [1, 1]
       Position		      [355, 139, 390, 171]
       ZOrder		      -4
@@ -1075,6 +1080,7 @@ Model {
     Block {
       BlockType		      Display
       Name		      "Display"
+      SID		      "5"
       Ports		      [1]
       Position		      [610, 150, 700, 180]
       ZOrder		      -5
@@ -1083,6 +1089,7 @@ Model {
     Block {
       BlockType		      Fcn
       Name		      "Fcn"
+      SID		      "6"
       Position		      [145, 130, 205, 160]
       ZOrder		      -6
       Expr		      "(u[1]-2)^2+(u[2]-3)^2"
@@ -1090,6 +1097,7 @@ Model {
     Block {
       BlockType		      Fcn
       Name		      "Fcn1"
+      SID		      "7"
       Position		      [500, 150, 560, 180]
       ZOrder		      -7
       Expr		      "u[1]*u[2]/u[3]"
@@ -1097,6 +1105,7 @@ Model {
     Block {
       BlockType		      Mux
       Name		      "Mux"
+      SID		      "8"
       Ports		      [2, 1]
       Position		      [130, 126, 135, 164]
       ZOrder		      -8
@@ -1107,6 +1116,7 @@ Model {
     Block {
       BlockType		      Mux
       Name		      "Mux1"
+      SID		      "9"
       Ports		      [3, 1]
       Position		      [470, 146, 475, 184]
       ZOrder		      -9
@@ -1117,6 +1127,7 @@ Model {
     Block {
       BlockType		      RelationalOperator
       Name		      "Relational\nOperator"
+      SID		      "10"
       Ports		      [2, 1]
       Position		      [270, 137, 300, 168]
       ZOrder		      -10
@@ -1127,19 +1138,36 @@ Model {
     Block {
       BlockType		      Scope
       Name		      "Scope"
+      SID		      "11"
       Ports		      [1]
       Position		      [620, 74, 650, 106]
       ZOrder		      -11
-      ScopeSpecificationString "C++SS(StrPVP('Location','[1284, 656, 1894, 955]'),StrPVP('Open','off'),MxPVP('AxesTitl"
-      "es',53,'struct(''axes1'',''%<SignalLabel>'')'),StrPVP('YMin','0'),StrPVP('YMax','105'),StrPVP('DataFormat','Stru"
-      "ctureWithTime'),StrPVP('BlockParamSampleTime','0'),StrPVP('LimitDataPoints','on'),StrPVP('Decimation','1'),StrPV"
-      "P('BlockParamSampleInput','off'))"
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingSaveFormat','StructureWithTime','DataLoggingLimitDataPoints',true,'Data"
+      "LoggingDecimation','1','DataLoggingDecimateData',true),extmgr.Configuration('Visuals','Time Domain',true,'Serial"
+      "izedDisplays',{struct('MinYLimReal','0','MaxYLimReal','105','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','"
+      "LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68"
+      "6274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623"
+      "529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717"
+      "647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<Signa"
+      "lLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Fcn1'}},'ShowCont"
+      "ent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','0','MaxYLimReal','105','YLabelReal',''"
+      ",'MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axe"
+      "sColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666"
+      "666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831"
+      "372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.074509803921568"
+      "6 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLine"
+      "s',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1)),extmgr.Configuration('Tools','Plot Navigation',true,'"
+      "OnceAtStop',false),extmgr.Configuration('Tools','Measurements',true,'Version','2017a')),'Version','2017a','Locat"
+      "ion',[594 76 1291 293])"
       NumInputPorts	      "1"
     }
     Block {
       BlockType		      UniformRandomNumber
       Name		      "Uniform Random\nNumber"
-      Position		      [35, 84, 65, 116]
+      SID		      "12"
+      Position		      [-30, 84, 0, 116]
       ZOrder		      -12
       Minimum		      "-3"
       Maximum		      "7"
@@ -1148,7 +1176,8 @@ Model {
     Block {
       BlockType		      UniformRandomNumber
       Name		      "Uniform Random\nNumber1"
-      Position		      [35, 159, 65, 191]
+      SID		      "13"
+      Position		      [-5, 184, 25, 216]
       ZOrder		      -13
       Minimum		      "-2"
       Maximum		      "8"
@@ -1158,8 +1187,9 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "XY Graph"
+      SID		      "14"
       Ports		      [2]
-      Position		      [100, 275, 130, 310]
+      Position		      [90, 275, 120, 310]
       ZOrder		      1
       LibraryVersion	      "1.391"
       SourceBlock	      "simulink/Sinks/XY Graph"
@@ -1177,36 +1207,36 @@ Model {
       ZOrder		      1
       SrcBlock		      "Uniform Random\nNumber"
       SrcPort		      1
-      Points		      [12, 0]
+      Points		      [51, 0]
       Branch {
-	ZOrder			16
-	Points			[0, -30; -81, 0; 0, 230]
-	DstBlock		"XY Graph"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			15
-	Points			[28, 0; 0, 35]
+	ZOrder			37
+	Points			[54, 0; 0, 35]
 	DstBlock		"Mux"
 	DstPort			1
+      }
+      Branch {
+	ZOrder			16
+	Points			[0, 200]
+	DstBlock		"XY Graph"
+	DstPort			2
       }
     }
     Line {
       ZOrder		      2
       SrcBlock		      "Uniform Random\nNumber1"
       SrcPort		      1
-      Points		      [22, 0]
+      Points		      [51, 0]
       Branch {
-	ZOrder			13
-	Points			[0, 110]
-	DstBlock		"XY Graph"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			12
-	Points			[18, 0; 0, -20]
+	ZOrder			36
+	Points			[11, 0; 0, -25; 18, 0; 0, -20]
 	DstBlock		"Mux"
 	DstPort			2
+      }
+      Branch {
+	ZOrder			13
+	Points			[0, 85]
+	DstBlock		"XY Graph"
+	DstPort			1
       }
     }
     Line {
@@ -1272,8 +1302,18 @@ Model {
       ZOrder		      11
       SrcBlock		      "Fcn1"
       SrcPort		      1
-      DstBlock		      "Display"
-      DstPort		      1
+      Points		      [13, 0]
+      Branch {
+	ZOrder			31
+	Points			[0, -75]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			30
+	DstBlock		"Display"
+	DstPort			1
+      }
     }
   }
 }
