@@ -1,0 +1,160 @@
+\documentclass[14pt,a4paper]{extreport}
+
+% Caption configuration
+\usepackage{caption}
+
+% Times New Roman, be sure to build with XeLaTeX
+\usepackage{fontspec}
+\usepackage[russian]{babel}
+\setmainfont{Times New Roman}
+
+% mock data
+\usepackage{lipsum}
+
+% russian
+\usepackage[utf8]{inputenc}
+
+\linespread{1.5}
+
+\usepackage{graphicx}
+\usepackage[
+    left = 2cm,
+    right = 1cm,
+    top = 1cm,
+    bottom = 2cm,
+    headheight = 2cm
+]{geometry}
+
+%% New commands
+
+% caption | screenshot index
+\newcommand{\sshot}[2]{\begin{figure}[ht]%
+\centering\includegraphics[width=0.8\textwidth]{../Screenshots/Screenshot_#2}%
+\caption{#1}%
+\label{sshot#2}%
+\end{figure}%
+}
+
+\newcommand{\header}[1]{%
+{
+\clearpage%
+\fontsize{16pt}{14pt}\selectfont
+\begin{center}
+\textbf{\MakeUppercase{#1}:}
+\end{center}
+}
+}
+
+\newcommand{\anylogic}{\texttt{AnyLogic}}
+\newcommand{\labyear}{2017}
+\newcommand{\labtitle}{AnyLogic}
+\newcommand{\prepod}{Осипов~Н.~А.}
+\newcommand{\student}{Кислюк~И.~В.}
+
+
+% Configurations
+
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+% Рис 1. -> Рисунок 1
+\DeclareCaptionFormat{myformat}{\fontsize{12}{12}\selectfont#1#2#3}
+\captionsetup[figure]{format={myformat},name={Рисунок},labelsep=endash}
+
+\begin{document}
+
+	\begin{titlepage}
+	\begin{center}	
+		\fontsize{14pt}{14pt}\selectfont
+		МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ\\
+
+		\vspace*{0.6\baselineskip}
+
+		\MakeUppercase{Санкт-Петербургский Национальный Исследовательский Университет Информационных технологий, механики и оптики}		
+		
+		\vspace*{0.6\baselineskip}
+		\MakeUppercase{Факультет Инфокоммуникационных технологий}\\
+		\MakeUppercase{Кафедра программных систем}
+	
+		\vspace*{7\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		Отчет по лабораторной работе
+		
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+		\textbf{\labtitle}\\
+		\vspace*{1.15\baselineskip}
+		\end{center}
+	
+	\vspace*{2\baselineskip}
+	\begin{flushright}
+	\fontseries{m}\fontsize{14pt}{14pt}\selectfont
+	\textbf{Выполнил:}\\
+	\student\\
+	студент группы К4120\\
+	Проверил: \prepod\\
+	\end{flushright}
+	
+	\vspace{\fill}
+	\begin{center}
+	Санкт-Петербург\\
+	\vspace{-1ex}
+	\labyear
+	\end{center}
+	
+\end{titlepage}
+
+\fontsize{14pt}{14pt}\selectfont
+
+\header{Цель работы}
+
+Изучить и научиться применять пакет моделирования \anylogic.
+
+\header{Теоретическое введение}
+
+\begin{center}
+\textbf{Задача Эрланга}
+\end{center}
+
+Задача Эрланга связана с разработкой системы массового обслуживания для телефонной сети. Пример задачи -- в систему поступают заявки -– телефонные вызовы с интервалом времени между вызовами, который соответствует экспоненциальному закону распределения с некоторой интенсивностью $a$. Заявки обслуживаются в процессоре. Обслуживание заявки выполняется с некоторой интенсивностью $b$. При обслуживании вызова используется N каналов телефонной сети. Число каналов телефоной станции изменяется. Постройте модель обслуживания телефонных вызовов.
+
+\header{Ход работы}
+
+\begin{enumerate}
+
+\item В данном задании мы построили модель для исследования процесса незатухающих гармонических колебаний, а также удобный пользовательский интерфейс для её использования (рисунок \ref{sshot1}):
+
+\sshot{Модель незатухающих гармонических колебаний}{1}
+
+\clearpage
+
+\item Следующим заданием было создание модели обслуживания сервера, с использованием пользовательского класса в качестве агента. Созданная модель данной системы представлена на рисунке \ref{sshot2}.
+
+\sshot{Модель обслуживания сервера}{2}
+
+\clearpage
+
+\item Далее, мы изучили моделирование конечных автоматов на примере модели светофора (рисунок \ref{sshot3}).
+
+\sshot{Модель светофора}{3}
+
+\clearpage
+
+\item Также мы ознакомились с типовой задачей Эрланга и рассмотрели способы оптимизации моделей в \anylogic {} (рисунки \ref{sshot4}, \ref{sshot5}):
+
+\sshot{Типовая задача Эрланга}{4}
+\sshot{Оптимизации модели}{5}
+
+\clearpage
+
+\item В контрольном задании требовалось построить модель функционирования системы связи с двумя каналами -– основным и резервным, с перерывами в работе основного канала. Провести моделирование в течение 5 часов, а также определить рациональную ёмкость накопителя и вероятности передачи сообщений разными каналами (рисунки 6, 7):
+
+\sshot{Оптимизация финальной модели}{6}
+\sshot{Модель функционирования системы связи}{7}
+
+\end{enumerate}
+
+\header{Вывод}
+
+Успешно изучили и научились применять пакет \anylogic {} для моделирования систем.
+
+
+\end{document}
+
