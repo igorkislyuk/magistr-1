@@ -1,0 +1,188 @@
+\documentclass[14pt,a4paper]{extreport}
+
+% Caption configuration
+\usepackage{caption}
+
+% Times New Roman, be sure to build with XeLaTeX
+\usepackage{fontspec}
+\usepackage[russian]{babel}
+\setmainfont{Times New Roman}
+
+% mock data
+\usepackage{lipsum}
+
+% russian
+\usepackage[utf8]{inputenc}
+
+\linespread{1.5}
+
+\usepackage{graphicx}
+\usepackage[
+    left = 2cm,
+    right = 1cm,
+    top = 1cm,
+    bottom = 2cm,
+    headheight = 2cm
+]{geometry}
+
+%% New commands
+
+% caption | screenshot index
+\newcommand{\sshot}[2]{\begin{figure}[ht]%
+\centering\includegraphics[width=0.8\textwidth]{../Screenshots/Screenshot_#2}%
+\caption{#1}%
+\label{sshot#2}%
+\end{figure}%
+}
+
+\newcommand{\header}[1]{%
+{
+\clearpage%
+\fontsize{16pt}{14pt}\selectfont
+\begin{center}
+\textbf{\MakeUppercase{#1}:}
+\end{center}
+}
+}
+
+\newcommand{\labyear}{2017}
+\newcommand{\labtitle}{Байесовские сети}
+\newcommand{\prepod}{Осипов~Н.~А.}
+\newcommand{\student}{Кислюк~И.~В.}
+
+
+% Configurations
+
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+% Рис 1. -> Рисунок 1
+\DeclareCaptionFormat{myformat}{\fontsize{12}{12}\selectfont#1#2#3}
+\captionsetup[figure]{format={myformat},name={Рисунок},labelsep=endash}
+
+\begin{document}
+
+	\begin{titlepage}
+	\begin{center}	
+		\fontsize{14pt}{14pt}\selectfont
+		МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ\\
+
+		\vspace*{0.6\baselineskip}
+
+		\MakeUppercase{Санкт-Петербургский Национальный Исследовательский Университет Информационных технологий, механики и оптики}		
+		
+		\vspace*{0.6\baselineskip}
+		\MakeUppercase{Факультет Инфокоммуникационных технологий}\\
+		\MakeUppercase{Кафедра программных систем}
+	
+		\vspace*{7\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		Отчет по лабораторной работе
+		
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+		\textbf{\labtitle}\\
+		\vspace*{1.15\baselineskip}
+		\end{center}
+	
+	\vspace*{2\baselineskip}
+	\begin{flushright}
+	\fontseries{m}\fontsize{14pt}{14pt}\selectfont
+	\textbf{Выполнил:}\\
+	\student\\
+	студент группы К4120\\
+	Проверил: \prepod\\
+	\end{flushright}
+	
+	\vspace{\fill}
+	\begin{center}
+	Санкт-Петербург\\
+	\vspace{-1ex}
+	\labyear
+	\end{center}
+	
+\end{titlepage}
+
+\fontsize{14pt}{14pt}\selectfont
+
+\header{Цель работы}
+
+Создать модель (байесовскую сеть) в среде \texttt{Genie\_{}p} и с её помощью определить необходимые вероятности.
+
+\header{Теоретическое введение}
+
+\begin{center}
+\textbf{Теорема Байеса}
+\end{center}
+
+Вероятность наступления «события» при условии проведения «наблюдения» равна произведению вероятности наступления события и вероятности проведения наблюдения при условии наступления события, деленному на безусловную вероятность проведения наблюдения.
+
+\par
+
+Байесовская сеть — это направленный ациклический граф, в котором каждая вершина - случайная переменная.
+
+\par
+
+\begin{center}
+\textbf{Процесс рассуждения (вывода) в байесовских сетях доверия}
+\end{center}
+
+\begin{enumerate}
+
+\item Процесс рассуждения сопровождается распространением по сети вновь поступивших свидетельств. 
+
+\item Введение в байесовские сети доверия новых данных приводит к возникновению переходного процесса распространения по байесовской сети доверия вновь поступившего свидетельства. 
+
+\item После завершения переходного процесса каждому высказыванию, ассоциированному с вершинами графа, приписывается апостериорная вероятность, которая определяет степень доверия к этому высказыванию 
+
+\end{enumerate}
+
+\header{Ход работы}
+
+
+
+\begin{enumerate}
+
+\item  В начале работы собираем из элементов необходимую сеть, устанавливаем условные вероятности событий (рисунок \ref{sshot1}):
+
+\sshot{Байесовская сеть}{1}
+
+\clearpage
+
+\item Далее, необходимо определить следующие полные вероятности:
+
+\begin{itemize}
+
+\item диагностике логический диск недоступен
+\item на экране монитора нет изображения
+\item не горит индикатор питания
+
+\end{itemize}
+
+Они приведены на рисунках \ref{sshot2}--\ref{sshot4}:
+
+\sshot{Вероятность недоступности логического диска}{2}
+\sshot{Вероятность отсутствия изображения на экране монитора}{3}
+\sshot{Вероятность того, что индикатор питания не горит}{4}
+
+\clearpage
+
+\item Далее, предоставим в сеть следующие свидетельства:
+
+\begin{itemize}
+
+\item на жестком диске появились дефектные секторы
+
+\item контакты блока питания не нарушены
+
+\end{itemize}
+
+Результат на рисунке \ref{sshot5}.
+
+\sshot{Система с двумя свидетельствами}{5}
+
+\end{enumerate}
+
+\header{Вывод}
+
+Успешно создали модель байесовской сети и с её помощью определили вероятности заданных событий.
+
+\end{document}
+
