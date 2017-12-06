@@ -1,0 +1,6 @@
+
+AVRASM ver. 2.1.2  C:\Users\Admin\Documents\P3_ASM\P3_asm.asm Mon Nov 20 17:09:57 2017
+
+
+CSEG k            00000002
+CSEG stop         00000007

@@ -1,0 +1,15 @@
+INF_LOAD:Starting... scada3_0
+INF_RTM:Detected NT6.RTM 6.1 
+._.:Base TRACE MODE 6 Profiler  ver. 6.06.0 
+INF_LOAD:Load Channels = 3
+INF_LOAD:Templates=3 
+INF_LOAD:Objects = 3
+INF_RTM:Timer=0.055s CalcLoop=550ms 
+INF_LOAD:Templates=3 
+INF_LOAD:Objects = 3
+INF_RTM:Timer=0.055s CalcLoop=550ms 
+INF_RTM:stoping... 
+INF_RTM:mode=5(Stop) e15=00 e18=00 e20=00 
+INF_RTM:stop time is 0.827 s 
+INF_RTM:number of calculation = 156
+._.:END OF WORK 

@@ -1,0 +1,8 @@
+INF_LOAD:Starting... Scada2_2-variant3_0
+INF_RTM:Detected NT6.DVP 6.1 
+._.:Base TRACE MODE 6 Profiler  ver. 6.06.0 
+INF_LOAD:Node=0 tags=7 templates=2 obj=2 
+INF_LOAD:Max: tags=16777215 templates=32767 obj=32767 
+INF_LOAD:Node type=90901000 
+INF_LOAD:RTM_1 
+INF_LOAD:Found CH=7 Resource=0 ExtResurce=0 
