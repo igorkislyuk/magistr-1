@@ -1,0 +1,169 @@
+\documentclass[14pt,a4paper]{extreport}
+
+% Caption configuration
+\usepackage{caption}
+
+% Times New Roman, be sure to build with XeLaTeX
+\usepackage{fontspec}
+\usepackage[russian]{babel}
+\setmainfont{Times New Roman}
+
+% mock data
+\usepackage{lipsum}
+
+% russian
+\usepackage[utf8]{inputenc}
+
+\linespread{1.5}
+
+\usepackage{graphicx}
+\usepackage[
+    left = 2cm,
+    right = 1cm,
+    top = 1cm,
+    bottom = 2cm,
+    headheight = 2cm
+]{geometry}
+
+%% New commands
+
+% caption | screenshot index
+\newcommand{\sshot}[2]{\begin{figure}[ht]%
+\centering\includegraphics[width=0.8\textwidth]{../Screenshots/Screenshot_#2}%
+\caption{#1}%
+\label{sshot#2}%
+\end{figure}%
+}
+
+\newcommand{\header}[1]{%
+{
+\clearpage%
+\fontsize{16pt}{14pt}\selectfont
+\begin{center}
+\textbf{\MakeUppercase{#1}:}
+\end{center}
+}
+}
+
+\newcommand{\labyear}{2017}
+\newcommand{\labtitle}{Создание простейшего проекта}
+\newcommand{\prepod}{Осипов~Н.~А.}
+\newcommand{\student}{Кислюк~И.~В.}
+
+
+% Configurations
+
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+% Рис 1. -> Рисунок 1
+\DeclareCaptionFormat{myformat}{\fontsize{12}{12}\selectfont#1#2#3}
+\captionsetup[figure]{format={myformat},name={Рисунок},labelsep=endash}
+
+\begin{document}
+
+	\begin{titlepage}
+	\begin{center}	
+		\fontsize{14pt}{14pt}\selectfont
+		МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ\\
+
+		\vspace*{0.6\baselineskip}
+
+		\MakeUppercase{Санкт-Петербургский Национальный Исследовательский Университет Информационных технологий, механики и оптики}		
+		
+		\vspace*{0.6\baselineskip}
+		\MakeUppercase{Факультет Инфокоммуникационных технологий}\\
+		\MakeUppercase{Кафедра программных систем}
+	
+		\vspace*{7\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		Отчет по лабораторной работе
+		
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+		\textbf{\labtitle}\\
+		\vspace*{1.15\baselineskip}
+		\end{center}
+	
+	\vspace*{2\baselineskip}
+	\begin{flushright}
+	\fontseries{m}\fontsize{14pt}{14pt}\selectfont
+	\textbf{Выполнил:}\\
+	\student\\
+	студент группы К4120\\
+	Проверил: \prepod\\
+	\end{flushright}
+	
+	\vspace{\fill}
+	\begin{center}
+	Санкт-Петербург\\
+	\vspace{-1ex}
+	\labyear
+	\end{center}
+	
+\end{titlepage}
+
+\fontsize{14pt}{14pt}\selectfont
+
+\header{Цель работы}
+
+
+Освоить методику создания системы мониторинга, содержащую один узел АРМ с использованием механизма автопостроения каналов TRACE MODE методом \textbf{от шаблона экрана}.
+
+\header{Ход работы}
+
+
+Работа выполняется согласно пунктам задания. Примеры выполнения заданий приведены на соотвествующих рисунках.
+
+\begin{enumerate}
+
+\item Создание нового проекта. Пример приведен на рисунке \ref{sshot1}
+
+\sshot{Пример окна создания нового проекта}{1}
+
+\item Создание графического текста. Пример приведен на рисунке \ref{sshot2}
+
+\sshot{Пример создания текста}{2}
+
+\item Создание динамического текста, создание аргумента экрана в процессе настройки текста. Пример на рисунке \ref{sshot3}
+
+\sshot{Пример добавления привязки}{3}
+
+\item Выполним автопостроение канала и созданим генератор синуса, пример приведен на рисунке \ref{sshot4}
+
+\sshot{Пример создания генератора синуса}{4}
+
+\item Выполним тестовый запуск проекта проекта. Пример показан на рисунке  \ref{sshot5}
+
+\sshot{Пример тестового запуска проекта}{5}
+
+\item Теперь выполним добавление функции управления. Пример показан на рисунке~\ref{sshot6}
+
+\sshot{Пример добавления функции Control}{6}
+
+\item Для отображения добавим ГЭ тренд. Пример его работы показан на рисунке \ref{sshot7}
+
+\clearpage
+
+\sshot{Пример работы элемента}{7}
+
+\item Создадим аргументы и выберем язык ST. Примеры показаны на рисунках \ref{sshot8} и \ref{sshot9}
+
+\sshot{Пример использования языка ST}{8}
+
+\sshot{Пример программы на языке ST}{9}
+
+\clearpage
+
+\item Необходимо выполнить привязку аттрибутов, а также произвести тестовые запуски в TraceMode, и выполнить эксперимент с выводом данных в Excel. Примеры показаны на рисунках \ref{sshot10} -- \ref{sshot12}
+
+\sshot{Пример связывания данных}{10}
+\sshot{Пример финального тестового запуска}{11}
+\sshot{Пример вывода данных в Excel}{12}
+
+\end{enumerate}
+
+\header{Вывод}
+
+
+В результате проделанной работы был построен экспериментальный стенд для суммирования значений.
+
+\end{document}
+

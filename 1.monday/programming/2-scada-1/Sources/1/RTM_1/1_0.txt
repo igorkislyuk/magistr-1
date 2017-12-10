@@ -1,5 +1,5 @@
 INF_LOAD:Starting... 1_0
-INF_RTM:Detected NT6.RTM 6.2 
+INF_RTM:Detected NT5.RTM 5.1 
 ._.:Base TRACE MODE 6 Profiler  ver. 6.06.0 
 INF_LOAD:Load Channels = 4
 INF_LOAD:Templates=2 
@@ -8,10 +8,9 @@ INF_RTM:Timer=0.055s CalcLoop=550ms
 INF_RTM:start time is 0 s 
 INF_RTM:ModeSwitch e15=0000 e18=0000 e20=0000 
 INF_RTM:mode=2(Work) e15=00 e18=00 e20=00 
-WRN_DDE:¸ %vàþ-ÐŸ¸wíâþÿÿÿ ý-×
-µw 
+WRN_DDE:X˜Z 
 INF_RTM:stoping... 
 INF_RTM:mode=5(Stop) e15=00 e18=00 e20=00 
-INF_RTM:stop time is 0.656 s 
-INF_RTM:number of calculation = 20
+INF_RTM:stop time is 0.61 s 
+INF_RTM:number of calculation = 33
 ._.:END OF WORK 
