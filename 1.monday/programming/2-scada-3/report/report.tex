@@ -1,0 +1,153 @@
+\documentclass[14pt,a4paper]{extreport}
+
+% Caption configuration
+\usepackage{caption}
+
+% Times New Roman, be sure to build with XeLaTeX
+\usepackage{fontspec}
+\usepackage[russian]{babel}
+\setmainfont{Times New Roman}
+
+% mock data
+\usepackage{lipsum}
+
+% russian
+\usepackage[utf8]{inputenc}
+
+\linespread{1.5}
+
+\usepackage{graphicx}
+\usepackage[
+    left = 2cm,
+    right = 1cm,
+    top = 1cm,
+    bottom = 2cm,
+    headheight = 2cm
+]{geometry}
+
+%% New commands
+
+% caption | screenshot index
+\newcommand{\sshot}[2]{\begin{figure}[ht]%
+\centering\includegraphics[width=0.8\textwidth]{../Screenshots/Screenshot_#2}%
+\caption{#1}%
+\label{sshot#2}%
+\end{figure}%
+}
+
+\newcommand{\header}[1]{%
+{
+\clearpage%
+\fontsize{16pt}{14pt}\selectfont
+\begin{center}
+\textbf{\MakeUppercase{#1}:}
+\end{center}
+}
+}
+
+\newcommand{\labyear}{2017}
+\newcommand{\labtitle}{Проектирование АСР уровня с использованием языка Structured Text}
+\newcommand{\prepod}{Осипов~Н.~А.}
+\newcommand{\student}{Кислюк~И.~В.}
+
+
+% Configurations
+
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+% Рис 1. -> Рисунок 1
+\DeclareCaptionFormat{myformat}{\fontsize{12}{12}\selectfont#1#2#3}
+\captionsetup[figure]{format={myformat},name={Рисунок},labelsep=endash}
+
+\begin{document}
+
+	\begin{titlepage}
+	\begin{center}	
+		\fontsize{14pt}{14pt}\selectfont
+		МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ\\
+
+		\vspace*{0.6\baselineskip}
+
+		\MakeUppercase{Санкт-Петербургский Национальный Исследовательский Университет Информационных технологий, механики и оптики}		
+		
+		\vspace*{0.6\baselineskip}
+		\MakeUppercase{Факультет Инфокоммуникационных технологий}\\
+		\MakeUppercase{Кафедра программных систем}
+	
+		\vspace*{7\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		Отчет по лабораторной работе
+		
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+		\textbf{\labtitle}\\
+		\vspace*{1.15\baselineskip}
+		\end{center}
+	
+	\vspace*{2\baselineskip}
+	\begin{flushright}
+	\fontseries{m}\fontsize{14pt}{14pt}\selectfont
+	\textbf{Выполнил:}\\
+	\student\\
+	студент группы К4120\\
+	Проверил: \prepod\\
+	\end{flushright}
+	
+	\vspace{\fill}
+	\begin{center}
+	Санкт-Петербург\\
+	\vspace{-1ex}
+	\labyear
+	\end{center}
+	
+\end{titlepage}
+
+\fontsize{14pt}{14pt}\selectfont
+
+\header{Цель работы}
+
+
+Разработать АСР (автоматическую систему с регулированием) уровня, изучить язык программирования SCADA-программ на примере разработки АСР уровня.
+
+\header{Ход работы}
+
+
+\begin{itemize}
+
+\item Создание переменных уровня экрана. Пример показан на рисунке~\ref{sshot1}
+
+\sshot{Пример создания переменных}{1}
+
+\item Создание программы для управления уровнем
+
+\sshot{Пример программы для управления уровнем}{2}
+
+\item Привязка значений экрана к значениям локальных переменных программы
+
+\sshot{Пример свойств привязки}{3}
+
+\clearpage
+
+\item Привязка значений ГЭ «Ползунок» к значениям локальных переменных программы
+
+\sshot{Пример привязки значений ползунка}{4}
+
+\item Связывание данных программы с переменными экрана.
+
+\sshot{Пример связывания данных}{5}
+
+\item Результат привязки данных программы~\#2 к значениям переменных экрана
+
+\sshot{Пример связывания данных программы~\#2}{6}
+
+\item Результат работы модели: изменение уровня ёмкости, ГЭ «Ползунок» и графика наполнения ёмкости
+
+\sshot{Пример работы модели}{7}
+
+\end{itemize}
+
+\header{Вывод}
+
+
+В ходе выполнения лабораторной работы были получены навыки программирования на языке Structured Text при разработке АСР уровня.
+
+\end{document}
+
