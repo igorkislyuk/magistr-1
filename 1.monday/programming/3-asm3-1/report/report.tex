@@ -1,0 +1,147 @@
+\documentclass[14pt,a4paper]{extreport}
+
+% Caption configuration
+\usepackage{caption}
+
+% Times New Roman, be sure to build with XeLaTeX
+\usepackage{fontspec}
+\usepackage[russian]{babel}
+\setmainfont{Times New Roman}
+
+% mock data
+\usepackage{lipsum}
+
+% russian
+\usepackage[utf8]{inputenc}
+
+\linespread{1.5}
+
+\usepackage{graphicx}
+\usepackage[
+    left = 2cm,
+    right = 1cm,
+    top = 1cm,
+    bottom = 2cm,
+    headheight = 2cm
+]{geometry}
+
+%% New commands
+
+% caption | screenshot index
+\newcommand{\sshot}[2]{\begin{figure}[ht]%
+\centering\includegraphics[width=0.8\textwidth]{../Screenshots/Screenshot_#2}%
+\caption{#1}%
+\label{sshot#2}%
+\end{figure}%
+}
+
+\newcommand{\header}[1]{%
+{
+\clearpage%
+\fontsize{16pt}{14pt}\selectfont
+\begin{center}
+\textbf{\MakeUppercase{#1}:}
+\end{center}
+}
+}
+
+\newcommand{\labyear}{2017}
+\newcommand{\labtitle}{Основы программирования микроконтроллеров}
+\newcommand{\prepod}{Осипов~Н.~А.}
+\newcommand{\student}{Кислюк~И.~В.}
+
+
+% Configurations
+
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+% Рис 1. -> Рисунок 1
+\DeclareCaptionFormat{myformat}{\fontsize{12}{12}\selectfont#1#2#3}
+\captionsetup[figure]{format={myformat},name={Рисунок},labelsep=endash}
+
+\begin{document}
+
+	\begin{titlepage}
+	\begin{center}	
+		\fontsize{14pt}{14pt}\selectfont
+		МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ\\
+
+		\vspace*{0.6\baselineskip}
+
+		\MakeUppercase{Санкт-Петербургский Национальный Исследовательский Университет Информационных технологий, механики и оптики}		
+		
+		\vspace*{0.6\baselineskip}
+		\MakeUppercase{Факультет Инфокоммуникационных технологий}\\
+		\MakeUppercase{Кафедра программных систем}
+	
+		\vspace*{7\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		Отчет по лабораторной работе
+		
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+		\textbf{\labtitle}\\
+		\vspace*{1.15\baselineskip}
+		\end{center}
+	
+	\vspace*{2\baselineskip}
+	\begin{flushright}
+	\fontseries{m}\fontsize{14pt}{14pt}\selectfont
+	\textbf{Выполнил:}\\
+	\student\\
+	студент группы К4120\\
+	Проверил: \prepod\\
+	\end{flushright}
+	
+	\vspace{\fill}
+	\begin{center}
+	Санкт-Петербург\\
+	\vspace{-1ex}
+	\labyear
+	\end{center}
+	
+\end{titlepage}
+
+\fontsize{14pt}{14pt}\selectfont
+
+\header{Цель работы}
+
+
+\begin{itemize}
+
+\item изучение назначения и особенностей архитектуры однокристальных микроконтроллеров;
+
+\item ознакомление с архитектурой и программной моделью AVR-микроконтроллеров;
+
+\item изучение этапов разработки ПО для встраиваемых микропроцессоров;
+
+\item приобретение навыков работы в среде AVR Studio.
+
+\end{itemize}
+
+\header{Ход работы}
+
+
+\begin{itemize}
+
+\item Создадим программу по образцу, при помощи AVR Studio и проверим по шагам (строчкам) её работу. Для этого расставим точки останова на необходимых строчках и пошагово пройдём по ним. В процессе отладки программы можно заметить, как поочерёдно заполняются регистры соответствующие работающими с ними командами
+
+\sshot{Пример листинга первой программы}{1}
+
+\item Создадим программу вычисления произведения и суммы двух чисел А и В, находящихся в РОН. Затем из суммы А и В вычесть число С. Числа А, В и С выбираются в соответствии с номером варианта. В начало программы нужно поместить директиву «.device» для микроконтроллера \texttt{ATmega8535}. В комментариях указаны фамилия и номер группы
+
+\sshot{Пример программы с индиивидуальным заданием}{2}
+
+\item В процессе отладки можно увидеть, как происходит изменение значений регистра. Также можно заметить, что при умножении удваивается количество разрядов, что приводит к занятию результатом умножения двух РОН.
+
+\end{itemize}
+
+\header{Вывод}
+
+
+\textbf{Сигналы состояния} характеризуют текущие параметры объекта управления. Они формируются путём преобразования выходных сигналов датчиков (Д) с помощью \\ аналого--цифровых преобразователей (АЦП) или формирователей сигналов состояния (ФСС); последние чаще всего выполняют функции гальванической развязки и формирования уровней.
+
+\par
+
+\textbf{Сигналы управления}, выработанные микроконтроллером, подвергаются преобразованию с помощью цифро-аналоговых преобразователей (ЦАП) или формирователей сигналов управления (ФСУ), в качестве которых применяются усилители мощности, оптроны, транзисторные. Выходные сигналы ЦАП и ФСУ представляют собой соответственно аналоговые и дискретные управляющие воздействия, которые поступают на исполнительные устройства (ИУ). В системе могут быть также предусмотрены панель управления, устройство индикации и интерфейс для обмена информацией с внешними устройствами. В зависимости от назначения и характеристик конкретной системы некоторые из указанных элементов могут отсутствовать.
+
+\end{document}
+
