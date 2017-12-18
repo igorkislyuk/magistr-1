@@ -1,0 +1,176 @@
+\documentclass[14pt,a4paper]{extreport}
+
+% Caption configuration
+\usepackage{caption}
+
+% Times New Roman, be sure to build with XeLaTeX
+\usepackage{fontspec}
+\usepackage[russian]{babel}
+\setmainfont{Times New Roman}
+
+% mock data
+\usepackage{lipsum}
+
+% russian
+\usepackage[utf8]{inputenc}
+
+\linespread{1.5}
+
+\usepackage{graphicx}
+\usepackage[
+    letterpaper,
+    left        = 2cm,
+    right       = 1cm,
+    top         = 1cm,
+    headheight  = 2cm
+]{geometry}
+
+%% New commands
+
+% caption | screenshot index
+\newcommand{\screenshot}[2]{\begin{figure}[ht]%
+\centering\includegraphics[width=0.8\textwidth]{../screenshots/screen-#2}%
+\caption{#1}%
+\label{picture#2}%
+\end{figure}%
+}
+
+\newcommand{\header}[1]{%
+{
+\fontsize{16pt}{14pt}\selectfont
+\begin{center}
+\textbf{\MakeUppercase{#1}:}
+\end{center}
+}
+}
+
+\newcommand{\anan}{Ананченко~И.~В.}
+\newcommand{\osipov}{Осипов~Н.~А.}
+\newcommand{\igork}{Кислюк~И.~В.}
+\newcommand{\egor}{Антонов~Е.~П.}
+\newcommand{\igorl}{Лебедев~И.~Ю.}
+
+\newcommand{\ping}{\texttt{ping }}
+
+\newcommand{\dns}{\texttt{DNS}}
+
+% Configurations
+
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+% Рис 1. -> Рисунок 1
+\DeclareCaptionFormat{myformat}{\fontsize{12}{12}\selectfont#1#2#3}
+\captionsetup[figure]{format={myformat},name={Рисунок},labelsep=endash}
+
+\begin{document}
+
+	\begin{titlepage}
+	\begin{center}	
+		\fontsize{14pt}{14pt}\selectfont
+		МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ\\
+
+		\vspace*{0.6\baselineskip}
+		
+		САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, МЕХАНИКИ И ОПТИКИ
+		
+		\vspace*{0.6\baselineskip}
+		ФАКУЛЬТЕТ ИНФОКОММУНИКАЦИОННЫХ ТЕХНОЛОГИЙ
+		КАФЕДРА ПРОГРАММНЫХ СИСТЕМ
+	
+		\vspace*{7\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		Отчет по лабораторной работе
+		
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+		\textbf{Прослушивание трафика с помощью ПО Wireshark}\\
+		\vspace*{1.15\baselineskip}
+		\end{center}
+	
+	\vspace*{2\baselineskip}
+	\begin{flushright}
+	\fontseries{m}\fontsize{14pt}{14pt}\selectfont
+	\textbf{Выполнил:}\\
+	\igork\\
+	студент группы К4120\\
+	Проверил: \anan\\
+	\end{flushright}
+	
+	\vspace{\fill}
+	\begin{center}
+	Санкт-Петербург\\
+	2017
+	\end{center}
+	
+\end{titlepage}
+
+\newpage
+
+\header{Цель работы}
+
+\fontsize{14pt}{14pt}\selectfont
+
+Прослушать трафик с помощью программы WireShark, который будет сгенерирован следующими командами:
+
+\begin{itemize}
+\item Команда ping
+\item Команда ping для имени сервера. Пример: \verb|ping server|
+\end{itemize}
+
+\clearpage
+
+
+\header{Ход работы}
+
+\begin{enumerate}
+
+\item Работа проводится с двумя машинами. На первой машине установлена серверная операционная система \verb|Windows Server 2012 R2|, на второй машине установлен дистрибутив \verb|Kali Linux|. Для краткости первую машину будем именовать серверной, вторую машину -- клиентской. Узнаем \verb|ipaddress| серверной машины с помощью команды \verb|ipconfig|. Выполним команду \ping с серверной на клиентскую. Пример показан на рисунке~\ref{picture1}.
+
+\screenshot{Пример команды \ping с серверной машины}{1}
+
+\item Запустить программу \texttt{Wireshark} и произвести перехват запроса \ping с клиентской машины на сервеную. Пример продемонстрирован на рисунках~\ref{picture2} и \ref{picture3}.
+
+\screenshot{Пример перехвата запроса при помощи программы Wireshark}{2}
+
+\screenshot{Пример детального вида для команды \ping}{3}
+
+\item Необходимо выполнить настройку \dns сервера для выполнения запроса на определение ip-адреса через имя сервера. Этапы следующие.
+
+\item Настройка определенных ролей на серверой машине. Сначала выбираются необходимые роли и надстройки над ними. Примеры показаны на рисунках \ref{picture4}, \ref{picture5}, \ref{picture6}.
+
+\screenshot{Выбор роли \dns {} среди доступных ролей}{4}
+\screenshot{Подтверждение установки \dns {} ролей}{5}
+\screenshot{Завершение установки \dns {} ролей и надстроек}{6}
+
+\item Следующий этапом стала установка зоны и ручное добавление соотвествие имени (в данном случае \texttt{server} к локальному адресу сервеной машины). Процесс добавления зоны продемонстрирован на рисунках~\ref{picture7}, \ref{picture8}, \ref{picture9}, \ref{picture10}.
+
+\screenshot{Создание зоны типа \texttt{forward lookup zone}}{7}
+\screenshot{Установка имени зоны}{8}
+\screenshot{Выбор файла для хранение значений в данной зоне}{9}
+\screenshot{Завершение настройки зоны}{10}
+
+\item Далее необходимо занести соответствие локального адреса и имени компьютера в зону.
+
+\item После предыдущего этапа возможно выполнить запрос на разрещение адреса компьютера через имя в таблице \dns . Примеры показаны на рисунках~\ref{picture11}, \ref{picture12}.
+
+\screenshot{Пример возможного списка пакетов при выполнении запроса \dns}{11}
+\screenshot{Пример окна терминала, в котором происходит разрешение имени \dns}{12}
+
+\end{enumerate}
+
+\clearpage
+
+\header{Вывод}
+
+В ходе лабораторной работы была построена сеть с двумя виртуальными машинами, на одной из которых был установлен 
+дистрибутив \texttt{Kali Linux}. На прослушиваемой машине была поднята роль \dns {}-сервера. \\
+
+При помощи входящей в дистрибутив программы \texttt{WireShark} были перехвачены следующие типы запросов:
+
+\begin{itemize}
+\item \ping запрос
+\item \dns {} запрос 
+\end{itemize}
+
+В результате были получены навыки использования специального ПО для перехвата и просмотра трафика в сети.
+
+\end{document}
+
