@@ -1,0 +1,139 @@
+\documentclass[14pt,a4paper]{extreport}
+
+% Caption configuration
+\usepackage{caption}
+
+% Times New Roman, be sure to build with XeLaTeX
+\usepackage{fontspec}
+\usepackage[russian]{babel}
+\setmainfont{Times New Roman}
+
+% mock data
+\usepackage{lipsum}
+
+% russian
+\usepackage[utf8]{inputenc}
+
+\linespread{1.5}
+
+\usepackage{graphicx}
+\usepackage[
+    left = 2cm,
+    right = 1cm,
+    top = 1cm,
+    bottom = 2cm,
+    headheight = 2cm
+]{geometry}
+
+%% New commands
+
+% caption | screenshot index
+\newcommand{\sshot}[2]{\begin{figure}[ht]%
+\centering\includegraphics[width=0.8\textwidth]{../Screenshots/Screenshot_#2}%
+\caption{#1}%
+\label{sshot#2}%
+\end{figure}%
+}
+
+\newcommand{\header}[1]{%
+{
+\clearpage%
+\fontsize{16pt}{14pt}\selectfont
+\begin{center}
+\textbf{\MakeUppercase{#1}:}
+\end{center}
+}
+}
+
+\newcommand{\labyear}{2017}
+\newcommand{\labtitle}{Спектральный анализ}
+\newcommand{\prepod}{Ананченко~И.~В.}
+\newcommand{\student}{Кислюк~И.~В.}
+
+\newcommand{\mathcad}{\texttt{Mathcad}}
+\newcommand{\matlab}{\texttt{Matlab}}
+
+% Configurations
+
+% Рис 1. -> Рис 1 --, Таблица 1. -> Таблица 1 --
+% Рис 1. -> Рисунок 1
+\DeclareCaptionFormat{myformat}{\fontsize{12}{12}\selectfont#1#2#3}
+\captionsetup[figure]{format={myformat},name={Рисунок},labelsep=endash}
+
+\begin{document}
+
+	\begin{titlepage}
+	\begin{center}	
+		\fontsize{14pt}{14pt}\selectfont
+		МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ\\
+
+		\vspace*{0.6\baselineskip}
+
+		\MakeUppercase{Санкт-Петербургский Национальный Исследовательский Университет Информационных технологий, механики и оптики}		
+		
+		\vspace*{0.6\baselineskip}
+		\MakeUppercase{Факультет Инфокоммуникационных технологий}\\
+		\MakeUppercase{Кафедра программных систем}
+	
+		\vspace*{7\baselineskip}
+		\fontseries{m}\fontsize{19pt}{18pt}\selectfont
+		Отчет по лабораторной работе
+		
+		\fontseries{m}\fontsize{20pt}{18pt}\selectfont
+		\textbf{\labtitle}\\
+		\vspace*{1.15\baselineskip}
+		\end{center}
+	
+	\vspace*{2\baselineskip}
+	\begin{flushright}
+	\fontseries{m}\fontsize{14pt}{14pt}\selectfont
+	\textbf{Выполнил:}\\
+	\student\\
+	студент группы К4120\\
+	Проверил: \prepod\\
+	\end{flushright}
+	
+	\vspace{\fill}
+	\begin{center}
+	Санкт-Петербург\\
+	\vspace{-1ex}
+	\labyear
+	\end{center}
+	
+\end{titlepage}
+
+\fontsize{14pt}{14pt}\selectfont
+
+\header{Цель работы}
+
+Изучить спектральный анализ, Фурье-преобразование сигнала, спектральный анализ случайных сигналов и выполнить примеры в \mathcad{} и \matlab{}.
+
+\header{Ход работы}
+
+Выполним примеры реализации преобразований Фурье в пакете \mathcad{} и \matlab{}
+
+\vspace{50pt}
+
+\textbf{Пример 5.1 } Прямое и обратное преобразование Фурье детерминированного сигнала.
+
+\sshot{Пример прямого и обратного преобразования Фурье детерминированного сигнала.}{1}
+
+\clearpage
+
+\textbf{Пример 5.2 } Прямое и обратное преобразование Фурье случайного сигнала.
+
+\sshot{Прямое и обратное преобразование Фурье случайного сигнала}{2}
+
+\clearpage
+
+\textbf{Пример 5.3 } Прямое и обратное преобразования Фурье в пакете \matlab {}. Приведем пример реализации быстрого преобразования Фурье в \matlab{} для дискретной функции.
+
+\sshot{Графики сигнала и его прямого и обратного преобразований Фурье}{3}
+
+\header{Вывод}
+
+
+В ходе практической работы, был изучен спектральный анализ, Фурье-преобразование случайного сигнала и детерминированного сигнала. Также были сделаны примеры в \mathcad{} и \matlab{}, с помощью которых можно построить графики сигналов.
+
+\end{document}
+
